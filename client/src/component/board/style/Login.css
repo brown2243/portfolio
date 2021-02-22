@@ -101,6 +101,7 @@
   background: #65dfc9;
   color: #178dee;
   font-size: 1.5rem;
+  opacity: 0.7;
 }
 
 .login-board .form label {

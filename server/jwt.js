@@ -1,5 +1,3 @@
-const jwtObj = {};
+const jwtkey = "silver";
 
-jwtObj.secret = "silver";
-
-module.exports = jwtObj;
+module.exports = jwtkey;

@@ -19,11 +19,8 @@ function Login({ history }) {
     console.log(values);
     loginUser(values)
       .then((res) => {
-        if (String(res.data)) console.log(res.data);
-        else {
-          console.log(res);
-          console.log("로그인 성공");
-        }
+        console.log(res);
+        console.log(res.data);
       })
       .catch((err) => {
         console.error(err);
@@ -41,7 +38,13 @@ function Login({ history }) {
 
           <form method="POST" onSubmit={onSubmitLogin}>
             <div className="form">
-              <input type="text" name="id" onChange={handleChange} required />
+              <input
+                type="text"
+                name="id"
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
               <label className="label-name">
                 <span className="content-name">ID</span>
               </label>
@@ -52,6 +55,7 @@ function Login({ history }) {
                 type="Password"
                 name="pwd"
                 onChange={handleChange}
+                autoComplete="off"
                 required
               />
               <label className="label-name">

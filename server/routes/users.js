@@ -14,11 +14,10 @@ router.route("/login").post(async (req, res, next) => {
       if (bcrypt.compareSync(req.body.pwd, user[0].pwd)) {
         // 여기서 jwt코인 발급해줘야함
         console.log("jwt");
-        const token = jwt.sign({ userID: user._id }, SECRET_TOKEN, {
-          expiresIn: "7d",
+        const token = jwt.sign({ userID: user[0]._id }, SECRET_TOKEN, {
+          expiresIn: "1d",
         });
-
-        res.json(user);
+        res.send(token);
       } else res.send("비밀번호 오류");
       // res.status(500).json({ error: "아이디 오류" });
     } else {

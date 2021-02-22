@@ -28,11 +28,11 @@ function Board() {
               </div>
             </div>
             {/* 로그인 */}
-            <div className="pro">
-              <Link to="board/login">
+            <Link to="board/login">
+              <div className="pro">
                 <h2>Join or Login</h2>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
 
           <div className="games">
