@@ -16,11 +16,12 @@ function Login({ history }) {
 
   const onSubmitLogin = (e) => {
     e.preventDefault();
-    console.log(values);
+    console.log("로그인");
     loginUser(values)
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
+        console.log("로그인 성공");
+        localStorage.setItem("JWT", res.data);
+        history.push("/board");
       })
       .catch((err) => {
         console.error(err);

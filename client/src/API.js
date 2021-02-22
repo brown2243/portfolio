@@ -10,13 +10,14 @@ function loginUser(user) {
 function insertUser(user) {
   return Axios.post(BOARD + "/user", user);
 }
-function fetchByUser(id) {
-  return Axios.get(BOARD + "/" + id);
+function fetchByToken(token) {
+  return Axios.post(BOARD + "/", token);
 }
-function updateUser() {
-  return Axios.put(BOARD);
-}
-function deleteUser() {
-  return Axios.delete(BOARD);
-}
-export { loginUser, fetchByUser, insertUser };
+
+// function updateUser() {
+//   return Axios.put(BOARD);
+// }
+// function deleteUser() {
+//   return Axios.delete(BOARD);
+// }
+export { loginUser, fetchByToken, insertUser };

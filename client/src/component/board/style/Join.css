@@ -123,9 +123,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  html {
-    font-size: 110%;
-  }
   .join-board {
     width: 80vw;
   }

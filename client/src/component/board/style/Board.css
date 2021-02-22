@@ -188,37 +188,17 @@ section.glass .games .cards .card {
 }
 
 @media screen and (max-width: 1480px) {
-  section.glass {
-    width: 70%;
-  }
-  section.glass .dashboard {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  section.glass .games {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+  html {
+    font-size: 90%;
   }
 }
 
 @media screen and (max-width: 1068px) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
   section.glass {
     width: 80%;
-  }
-  section.glass .dashboard {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  section.glass .games {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
   }
 }
 

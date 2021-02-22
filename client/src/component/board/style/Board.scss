@@ -149,28 +149,16 @@ section.glass {
 }
 
 @media screen and (max-width: 1480px) {
-  section.glass {
-    width: 70%;
-    .dashboard {
-      flex: 1;
-    }
-    .games {
-      flex: 3;
-    }
+  html {
+    font-size: 90%;
   }
 }
 @media screen and (max-width: 1068px) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
   section.glass {
     width: 80%;
-    .dashboard {
-      flex: 1;
-    }
-    .games {
-      flex: 2;
-    }
   }
 }
 @media screen and (max-width: 768px) {

@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/Board.css";
+import { fetchByToken } from "../../API";
+import User from "./parts/User";
 
 function Board() {
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    console.log("board useEffect");
+    const TOKEN = localStorage.getItem("JWT");
+    if (TOKEN) {
+      fetchByToken({ token: TOKEN })
+        .then((res) => {
+          setUser(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, []);
+
   return (
-    <body>
+    <>
       <main className="board">
         <section className="glass">
           <div className="dashboard">
             <div className="user">
-              <h3>Dev ST</h3>
-              <p>Pro Member</p>
+              <User name={user.name} />
             </div>
 
             <div className="links">
@@ -77,7 +92,7 @@ function Board() {
 
       <div className="circle1"></div>
       <div className="circle2"></div>
-    </body>
+    </>
   );
 }
 
