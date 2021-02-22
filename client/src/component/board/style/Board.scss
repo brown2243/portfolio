@@ -1,0 +1,187 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+main.board {
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 2.5rem;
+    opacity: 0.8;
+  }
+  h2,
+  p {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.glass {
+  height: 80vh;
+  width: 60%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+
+  .dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+    text-align: center;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    .links {
+      .link {
+        margin: 1rem;
+      }
+      h2 {
+        width: 40%;
+        padding: 0rem 2rem;
+      }
+    }
+    .pro {
+      background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+      border-radius: 2rem;
+      color: white;
+      padding: 1rem 1rem 1.5rem 1.5rem;
+      transform: translate(0%, -20%);
+      h2 {
+        font-weight: 600;
+        color: white;
+      }
+    }
+  }
+
+  .games {
+    display: flex;
+    height: 100%;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem;
+    .status {
+      margin: 0rem 0rem 0rem 0.8rem;
+      input {
+        background: linear-gradient(
+          to right bottom,
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.3)
+        );
+        border: none;
+        width: 50%;
+        padding: 0.5rem;
+        border-radius: 2rem;
+      }
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        display: flex;
+        background: linear-gradient(
+          to left top,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.8)
+        );
+        border-radius: 1rem;
+        margin: 0.5rem;
+        padding: 0.8rem;
+        box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+      }
+    }
+  }
+}
+
+.circle1,
+.circle2 {
+  z-index: 1;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 10%;
+}
+
+@media screen and (max-width: 1480px) {
+  section.glass {
+    width: 70%;
+    .dashboard {
+      flex: 1;
+    }
+    .games {
+      flex: 3;
+    }
+  }
+}
+@media screen and (max-width: 1068px) {
+  html {
+    font-size: 90%;
+  }
+  section.glass {
+    width: 80%;
+    .dashboard {
+      flex: 1;
+    }
+    .games {
+      flex: 2;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  section.glass {
+    width: 100%;
+    flex-direction: column;
+    .dashboard {
+      flex: 1;
+    }
+  }
+}

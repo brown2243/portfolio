@@ -1,0 +1,138 @@
+.join-board {
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40vw;
+  height: 80vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+}
+
+.join-board .head {
+  margin-top: 1rem;
+}
+
+.join-board form {
+  width: 70%;
+}
+
+.join-board .form {
+  margin-top: 1rem;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.join-board .form input {
+  width: 100%;
+  height: 100%;
+  /* color: aqua; */
+  padding-top: 20px;
+  padding-left: 5px;
+  border: none;
+  outline: none;
+  background-color: #65dfc9;
+  color: #178dee;
+  font-size: 1.5rem;
+}
+
+.join-board .form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 2px solid #076e47;
+}
+
+.join-board .form label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  border-bottom: 5px solid #0bffa1;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.join-board .content-name {
+  margin-left: 5px;
+  color: white;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.join-board .form input:focus + .label-name .content-name,
+.join-board .form input:valid + .label-name .content-name {
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  font-size: 1rem;
+  color: #0b75ff;
+}
+
+.join-board .form input:focus + .label-name::after,
+.join-board .form input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.join-board button {
+  cursor: pointer;
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  height: 50px;
+  width: 100%;
+  border-radius: 0.5rem;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #65dfc9;
+  color: white;
+}
+
+.join-board button:hover {
+  background: white;
+  color: #65dfc9;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 110%;
+  }
+  .join-board {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .join-board {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=Join.css.map */

@@ -1,0 +1,168 @@
+.login-board {
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35vw;
+  height: 60vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+}
+
+.login-board form {
+  margin: 2rem;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.login-board form .btn-box {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-board form .btn-box button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  min-height: 50px;
+  min-width: 100px;
+  border-radius: 0.5rem;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #65dfc9;
+  color: white;
+}
+
+.login-board form .btn-box button:hover {
+  background: white;
+  color: #65dfc9;
+}
+
+.login-board form .btn-box button.link {
+  background: #426696;
+  color: white;
+}
+
+.login-board form .btn-box button.link:hover {
+  background: white;
+  color: #426696;
+}
+
+.login-board .form {
+  margin-top: 1rem;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.login-board .form input {
+  width: 100%;
+  height: 100%;
+  /* color: aqua; */
+  padding-top: 20px;
+  padding-left: 5px;
+  border: none;
+  outline: none;
+  background: #65dfc9;
+  color: #178dee;
+  font-size: 1.5rem;
+}
+
+.login-board .form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 2px solid #076e47;
+}
+
+.login-board .form label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  border-bottom: 5px solid #0bffa1;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.login-board .content-name {
+  margin-left: 5px;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.login-board .form input:focus + .label-name .content-name,
+.login-board .form input:valid + .label-name .content-name {
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  font-size: 14px;
+  color: #0b75ff;
+}
+
+.login-board .form input:focus + .label-name::after,
+.login-board .form input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@media screen and (max-width: 1024px) {
+  .login-board {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-board {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=Login.css.map */
