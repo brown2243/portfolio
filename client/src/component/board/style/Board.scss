@@ -65,10 +65,14 @@ section.glass {
     .links {
       .link {
         margin: 1rem;
-      }
-      h2 {
-        width: 40%;
-        padding: 0rem 2rem;
+        h2 {
+          width: 40%;
+          padding: 0rem 2rem;
+          transition: 0.2s;
+          &:hover {
+            color: #0969f0;
+          }
+        }
       }
     }
     .pro {
@@ -76,7 +80,7 @@ section.glass {
       background: linear-gradient(to right top, #65dfc9, #6cdbeb);
       border-radius: 2rem;
       color: white;
-      padding: 1rem 1rem 1.5rem 1.5rem;
+      padding: 1rem 1rem 1rem 1rem;
       transform: translate(0%, -20%);
       h2 {
         font-weight: 600;
@@ -85,7 +89,7 @@ section.glass {
     }
   }
 
-  .games {
+  .board {
     display: flex;
     height: 100%;
     flex: 3;
@@ -93,12 +97,12 @@ section.glass {
     margin: 1rem;
     position: relative;
 
-    .status {
+    .board-title {
       position: relative;
       margin: 2rem 0rem 0rem 0.8rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
       input {
         background: linear-gradient(
           to right bottom,
@@ -106,13 +110,13 @@ section.glass {
           rgba(255, 255, 255, 0.3)
         );
         border: none;
-        width: 140%;
+        width: 150%;
         padding: 0.5rem;
         border-radius: 2rem;
       }
       button {
-        margin-right: 2rem;
         cursor: pointer;
+        margin-right: 2rem;
         font-size: 1.2rem;
         font-weight: bold;
         border: none;
@@ -177,8 +181,11 @@ section.glass {
 }
 
 @media screen and (max-width: 1480px) {
-  html {
-    font-size: 90%;
+  section.glass {
+    width: 70%;
+    .board {
+      flex: 3;
+    }
   }
 }
 @media screen and (max-width: 1068px) {
@@ -187,6 +194,9 @@ section.glass {
   }
   section.glass {
     width: 80%;
+    .board {
+      flex: 3;
+    }
   }
 }
 @media screen and (max-width: 768px) {
@@ -196,8 +206,10 @@ section.glass {
   section.glass {
     width: 100%;
     flex-direction: column;
-    .dashboard {
-      flex: 1;
-    }
+  }
+}
+@media screen and (max-height: 500px) {
+  section.glass {
+    height: 100%;
   }
 }

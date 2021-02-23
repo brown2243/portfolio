@@ -6,6 +6,7 @@ const cors = require("cors");
 const connect = require("./schemas");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const postsRouter = require("./routes/post");
 const commentsRouter = require("./routes/comments");
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/", indexRouter);
 app.use("/board", cors("http://localhost:3000"), usersRouter);
+app.use("/board", cors("http://localhost:3000"), postsRouter);
 app.use("/comments", commentsRouter);
 
 app.post("/", (req, res) => {

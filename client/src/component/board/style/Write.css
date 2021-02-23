@@ -1,1 +1,20 @@
-/* No CSS *//*# sourceMappingURL=Write.css.map */
+.board .board-title div input.title {
+  width: 100%;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+.board .board-title textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  height: 40vh;
+  margin-top: 1rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border: none;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom-right-radius: 1rem;
+  outline: none;
+}
+/*# sourceMappingURL=Write.css.map */

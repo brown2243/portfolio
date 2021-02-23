@@ -91,9 +91,15 @@ section.glass .dashboard .links .link {
   margin: 1rem;
 }
 
-section.glass .dashboard .links h2 {
+section.glass .dashboard .links .link h2 {
   width: 40%;
   padding: 0rem 2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+section.glass .dashboard .links .link h2:hover {
+  color: #0969f0;
 }
 
 section.glass .dashboard .pro {
@@ -102,7 +108,7 @@ section.glass .dashboard .pro {
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
   border-radius: 2rem;
   color: white;
-  padding: 1rem 1rem 1.5rem 1.5rem;
+  padding: 1rem 1rem 1rem 1rem;
   -webkit-transform: translate(0%, -20%);
           transform: translate(0%, -20%);
 }
@@ -112,7 +118,7 @@ section.glass .dashboard .pro h2 {
   color: white;
 }
 
-section.glass .games {
+section.glass .board {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,7 +134,7 @@ section.glass .games {
   position: relative;
 }
 
-section.glass .games .status {
+section.glass .board .board-title {
   position: relative;
   margin: 2rem 0rem 0rem 0.8rem;
   display: -webkit-box;
@@ -137,23 +143,23 @@ section.glass .games .status {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-section.glass .games .status input {
+section.glass .board .board-title input {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.3)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
   border: none;
-  width: 140%;
+  width: 150%;
   padding: 0.5rem;
   border-radius: 2rem;
 }
 
-section.glass .games .status button {
-  margin-right: 2rem;
+section.glass .board .board-title button {
   cursor: pointer;
+  margin-right: 2rem;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
@@ -169,12 +175,12 @@ section.glass .games .status button {
   color: white;
 }
 
-section.glass .games .status button:hover {
+section.glass .board .board-title button:hover {
   background: white;
   color: #426696;
 }
 
-section.glass .games .cards {
+section.glass .board .cards {
   margin: 1rem 0rem 0rem 0rem;
   position: relative;
   display: -webkit-box;
@@ -186,7 +192,7 @@ section.glass .games .cards {
           flex-direction: column;
 }
 
-section.glass .games .cards .card {
+section.glass .board .cards .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,8 +228,13 @@ section.glass .games .cards .card {
 }
 
 @media screen and (max-width: 1480px) {
-  html {
-    font-size: 90%;
+  section.glass {
+    width: 70%;
+  }
+  section.glass .board {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
   }
 }
 
@@ -233,6 +244,11 @@ section.glass .games .cards .card {
   }
   section.glass {
     width: 80%;
+  }
+  section.glass .board {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
   }
 }
 
@@ -247,10 +263,11 @@ section.glass .games .cards .card {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  section.glass .dashboard {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+}
+
+@media screen and (max-height: 500px) {
+  section.glass {
+    height: 100%;
   }
 }
 /*# sourceMappingURL=Board.css.map */

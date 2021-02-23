@@ -13,6 +13,12 @@ function insertUser(user) {
 function fetchByToken(token) {
   return Axios.post(BOARD + "/", token);
 }
+function insertPost(post) {
+  return Axios.post(BOARD + "/write", post);
+}
+function fetchAllPost() {
+  return Axios.post(BOARD + "/post");
+}
 
 // function updateUser() {
 //   return Axios.put(BOARD);
@@ -21,3 +27,4 @@ function fetchByToken(token) {
 //   return Axios.delete(BOARD);
 // }
 export { loginUser, fetchByToken, insertUser };
+export { insertPost, fetchAllPost };

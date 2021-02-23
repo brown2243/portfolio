@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/Write.css";
-import { fetchByToken } from "../../API";
+import { fetchByToken, insertPost } from "../../API";
 import User from "./parts/User";
 
-function Write() {
-  const [user, setUser] = useState("");
-  const [post, setPost] = useState({
-    title: "",
-    writer: "",
-    desc: "",
-  });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setPost({ ...post, [name]: value });
-  };
+function Write({ history }) {
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     console.log("write useEffect");
@@ -23,6 +14,7 @@ function Write() {
       fetchByToken({ token: TOKEN })
         .then((res) => {
           setUser(res.data);
+          console.log(user);
         })
         .catch((err) => console.log(err));
     }
@@ -31,6 +23,25 @@ function Write() {
   const onClickLogout = (e) => {
     localStorage.clear();
     window.location.replace("/board");
+  };
+
+  const writePost = (e) => {
+    console.log("writePost");
+    e.preventDefault();
+
+    // 이부분 나중에 ref로 변경하자
+    const post = {
+      writer: user.id,
+      title: document.getElementById("title").value,
+      content: document.getElementById("content").value,
+    };
+    console.log("post is", post);
+    insertPost(post)
+      .then(() => {
+        console.log("성공");
+      })
+      .catch((err) => console.log("실패", err));
+    history.goBack();
   };
 
   return (
@@ -44,7 +55,9 @@ function Write() {
 
             <div className="links">
               <div className="link">
-                <h2>Streams</h2>
+                <Link to="/board">
+                  <h2>Board</h2>
+                </Link>
               </div>
               <div className="link">
                 <h2>Games</h2>
@@ -69,49 +82,29 @@ function Write() {
               </Link>
             )}
           </div>
-
-          <div className="games">
-            <div className="status">
-              <div>
-                <h1>Write a Post</h1>
-                <input type="text" />
-              </div>
-              <Link to="/board/write">
-                <button>Write</button>
-              </Link>
-            </div>
-
-            <div className="cards">
-              <div className="card">
-                <div className="card-info">
-                  <h2>Assassins Creed Valhalla</h2>
-                  <p>PS5 Version</p>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="card-info">
-                  <h2>Assassins Creed Valhalla</h2>
-                  <p>PS5 Version</p>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="card-info">
-                  <h2>Assassins Creed Valhalla</h2>
-                  <p>PS5 Version</p>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="card-info">
-                  <h2>Assassins Creed Valhalla</h2>
-                  <p>PS5 Version</p>
+          <form method="POST" onSubmit={writePost}>
+            <div className="board">
+              <div className="board-title">
+                <div>
+                  <h1>Title</h1>
+                  <input
+                    type="text"
+                    autoComplete="off"
+                    id="title"
+                    className="title"
+                    required
+                  />
+                  <textarea
+                    type="text"
+                    autoComplete="off"
+                    id="content"
+                    required
+                  />
+                  <button type="submit">POST</button>
                 </div>
               </div>
             </div>
-            <div>페이지네이션</div>
-          </div>
+          </form>
         </section>
       </main>
 

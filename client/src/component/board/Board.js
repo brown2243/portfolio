@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/Board.css";
-import { fetchByToken } from "../../API";
 import User from "./parts/User";
+import Post from "./parts/Post";
+import { fetchByToken, fetchAllPost } from "../../API";
 
 function Board() {
   const [user, setUser] = useState("");
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     console.log("board useEffect");
+    fetchAllPost()
+      .then((res) => {
+        setPosts(res.data.reverse());
+      })
+      .catch((err) => console.log(err));
+
     const TOKEN = localStorage.getItem("JWT");
     if (TOKEN) {
       fetchByToken({ token: TOKEN })
@@ -17,7 +25,9 @@ function Board() {
         })
         .catch((err) => console.log(err));
     }
+    console.log("posts are", posts);
   }, []);
+
   const onClickLogout = (e) => {
     localStorage.clear();
     window.location.replace("/board");
@@ -34,7 +44,9 @@ function Board() {
 
             <div className="links">
               <div className="link">
-                <h2>Streams</h2>
+                <Link to="/board">
+                  <h2>Board</h2>
+                </Link>
               </div>
               <div className="link">
                 <h2>Games</h2>
@@ -60,8 +72,8 @@ function Board() {
             )}
           </div>
 
-          <div className="games">
-            <div className="status">
+          <div className="board">
+            <div className="board-title">
               <div>
                 <h1>Write a Post</h1>
                 <input type="text" />
@@ -76,26 +88,9 @@ function Board() {
             </div>
 
             <div className="cards">
-              <div className="card">
-                <div className="card-info">
-                  <h2>Assassins Creed Valhalla</h2>
-                  <p>PS5 Version</p>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="card-info">
-                  <h2>Assassins Creed Valhalla</h2>
-                  <p>PS5 Version</p>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="card-info">
-                  <h2>Assassins Creed Valhalla</h2>
-                  <p>PS5 Version</p>
-                </div>
-              </div>
+              {posts.map((post, i) => (
+                <Post post={post} idx={posts.length - i - 1} />
+              ))}
 
               <div className="card">
                 <div className="card-info">
