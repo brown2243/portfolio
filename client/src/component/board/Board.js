@@ -18,6 +18,10 @@ function Board() {
         .catch((err) => console.log(err));
     }
   }, []);
+  const onClickLogout = (e) => {
+    localStorage.clear();
+    window.location.replace("/board");
+  };
 
   return (
     <>
@@ -25,7 +29,7 @@ function Board() {
         <section className="glass">
           <div className="dashboard">
             <div className="user">
-              <User name={user.name} />
+              <User userInfo={user} />
             </div>
 
             <div className="links">
@@ -43,17 +47,32 @@ function Board() {
               </div>
             </div>
             {/* 로그인 */}
-            <Link to="board/login">
-              <div className="pro">
-                <h2>Join or Login</h2>
+            {user ? (
+              <div className="pro" onClick={onClickLogout}>
+                <h2>LogOut!</h2>
               </div>
-            </Link>
+            ) : (
+              <Link to="/board/login">
+                <div className="pro">
+                  <h2>Join or Login!</h2>
+                </div>
+              </Link>
+            )}
           </div>
 
           <div className="games">
             <div className="status">
-              <h1>Search Game</h1>
-              <input type="text" />
+              <div>
+                <h1>Write a Post</h1>
+                <input type="text" />
+              </div>
+              {user ? (
+                <Link to="/board/write">
+                  <button>Write</button>
+                </Link>
+              ) : (
+                <></>
+              )}
             </div>
 
             <div className="cards">
@@ -84,8 +103,9 @@ function Board() {
                   <p>PS5 Version</p>
                 </div>
               </div>
+
+              <div>페이지네이션</div>
             </div>
-            <div>페이지네이션</div>
           </div>
         </section>
       </main>

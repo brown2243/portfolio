@@ -72,6 +72,7 @@ section.glass {
       }
     }
     .pro {
+      cursor: pointer;
       background: linear-gradient(to right top, #65dfc9, #6cdbeb);
       border-radius: 2rem;
       color: white;
@@ -89,10 +90,15 @@ section.glass {
     height: 100%;
     flex: 3;
     flex-direction: column;
-    justify-content: space-evenly;
     margin: 1rem;
+    position: relative;
+
     .status {
-      margin: 0rem 0rem 0rem 0.8rem;
+      position: relative;
+      margin: 2rem 0rem 0rem 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       input {
         background: linear-gradient(
           to right bottom,
@@ -100,12 +106,34 @@ section.glass {
           rgba(255, 255, 255, 0.3)
         );
         border: none;
-        width: 50%;
+        width: 140%;
         padding: 0.5rem;
         border-radius: 2rem;
       }
+      button {
+        margin-right: 2rem;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        min-height: 50px;
+        min-width: 100px;
+        border-radius: 0.5rem;
+        transition: 0.5s;
+        box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
+        background: #426696;
+        color: white;
+        &:hover {
+          background: white;
+          color: #426696;
+        }
+      }
     }
+
     .cards {
+      margin: 1rem 0rem 0rem 0rem;
+      position: relative;
       display: flex;
       flex-direction: column;
 
@@ -119,7 +147,7 @@ section.glass {
         border-radius: 1rem;
         margin: 0.5rem;
         padding: 0.8rem;
-        box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+        box-shadow: 1px 0px 10px rgba(0, 195, 255, 0.5);
       }
     }
   }

@@ -7,9 +7,9 @@ function App() {
     <>
       <Route exact path="/" component={Home} />
       <Route exact path="/board" component={Board} />
-      <Route exact path="/board/write" component={Write} />
       <Route exact path="/board/Login" component={Login} />
       <Route exact path="/board/Join" component={Join} />
+      <Route exact path="/board/write" component={Write} />
     </>
   );
 }

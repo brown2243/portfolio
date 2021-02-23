@@ -19,8 +19,8 @@ function Login({ history }) {
     console.log("로그인");
     loginUser(values)
       .then((res) => {
-        console.log("로그인 성공");
         localStorage.setItem("JWT", res.data);
+        console.log("로그인 성공");
         history.push("/board");
       })
       .catch((err) => {
@@ -65,11 +65,11 @@ function Login({ history }) {
             </div>
 
             <div className="btn-box">
+              <button>Login</button>
+              <h2>or</h2>
               <Link to="join">
                 <button className="link">Sign in</button>
               </Link>
-              <h2>or</h2>
-              <button>Login</button>
             </div>
           </form>
         </div>

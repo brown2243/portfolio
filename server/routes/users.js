@@ -11,7 +11,6 @@ router.route("/").post(async (req, res, next) => {
     const getTOKEN = req.body.token;
     const ObjID = jwt.verify(getTOKEN, SECRET_TOKEN).ObjID;
     const user = await User.find({ _id: ObjID });
-    user.pwd = "hide";
     res.status(200).json(user[0]);
   } catch (err) {
     console.error(err);

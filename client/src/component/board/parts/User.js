@@ -1,10 +1,16 @@
 import React from "react";
 
-function User(props) {
+function User({ userInfo }) {
   return (
     <>
-      <h3>Dev {props.name}</h3>
-      <p>Pro Member</p>
+      {userInfo.name ? (
+        <>
+          <h3>Hello! {userInfo.name}😎</h3>
+          <p>{userInfo.manager === 1 ? "Manager" : "User"} Member</p>
+        </>
+      ) : (
+        <h3>Hello! Anonymous</h3>
+      )}
     </>
   );
 }
