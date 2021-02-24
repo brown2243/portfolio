@@ -9,7 +9,9 @@ function User({ userInfo }) {
           <p>{userInfo.manager === 1 ? "Manager" : "User"} Member</p>
         </>
       ) : (
-        <h3>Hello! Anonymous</h3>
+        <h3>
+          Hello! <br /> Anonymous
+        </h3>
       )}
     </>
   );

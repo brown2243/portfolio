@@ -15,8 +15,8 @@ const postSchema = new Schema({
     required: true,
   },
   comment: {
-    type: Object,
-    default: {},
+    type: Array,
+    default: [],
   },
   createdAt: {
     type: Date,

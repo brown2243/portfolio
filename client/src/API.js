@@ -19,6 +19,9 @@ function insertPost(post) {
 function fetchAllPost() {
   return Axios.post(BOARD + "/post");
 }
+function fetch4Post(page) {
+  return Axios.post(BOARD + "/post/part", page);
+}
 
 // function updateUser() {
 //   return Axios.put(BOARD);
@@ -27,4 +30,4 @@ function fetchAllPost() {
 //   return Axios.delete(BOARD);
 // }
 export { loginUser, fetchByToken, insertUser };
-export { insertPost, fetchAllPost };
+export { insertPost, fetchAllPost, fetch4Post };

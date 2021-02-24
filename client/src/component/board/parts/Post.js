@@ -6,10 +6,8 @@ function Post({ idx, post }) {
     <>
       <div className="card">
         <div className="card-info">
-          <h2>
-            {idx + 1}. {post.title}
-          </h2>
-          <p>{post.writer}</p>
+          <h2>{post.title}</h2>
+          <p>작성자 {post.writer}님</p>
         </div>
       </div>
     </>

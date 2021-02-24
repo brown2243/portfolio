@@ -87,6 +87,11 @@ section.glass .dashboard {
   border-bottom-left-radius: 2rem;
 }
 
+section.glass .dashboard .links {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
 section.glass .dashboard .links .link {
   margin: 1rem;
 }
@@ -100,15 +105,16 @@ section.glass .dashboard .links .link h2 {
 
 section.glass .dashboard .links .link h2:hover {
   color: #0969f0;
+  font-weight: bolder;
 }
 
 section.glass .dashboard .pro {
   cursor: pointer;
   background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#6cdbeb));
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   color: white;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
   -webkit-transform: translate(0%, -20%);
           transform: translate(0%, -20%);
 }
@@ -122,7 +128,6 @@ section.glass .board {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
@@ -131,11 +136,12 @@ section.glass .board {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 1rem;
-  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section.glass .board .board-title {
-  position: relative;
   margin: 2rem 0rem 0rem 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,7 +165,7 @@ section.glass .board .board-title input {
 
 section.glass .board .board-title button {
   cursor: pointer;
-  margin-right: 2rem;
+  margin-right: 2.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
@@ -169,19 +175,19 @@ section.glass .board .board-title button {
   border-radius: 0.5rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
-          box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
   background: #426696;
   color: white;
 }
 
 section.glass .board .board-title button:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
+          box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
   background: white;
   color: #426696;
 }
 
 section.glass .board .cards {
-  margin: 1rem 0rem 0rem 0rem;
+  margin: 1.5rem 0rem 0rem 0rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,6 +196,7 @@ section.glass .board .cards {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 96%;
 }
 
 section.glass .board .cards .card {
@@ -201,8 +208,67 @@ section.glass .board .cards .card {
   border-radius: 1rem;
   margin: 0.5rem;
   padding: 0.8rem;
-  -webkit-box-shadow: 1px 0px 10px rgba(0, 195, 255, 0.5);
-          box-shadow: 1px 0px 10px rgba(0, 195, 255, 0.5);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 195, 255, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 195, 255, 0.5);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+section.glass .board .cards .card:hover {
+  -webkit-box-shadow: 0px 0px 10px #00c3ff;
+          box-shadow: 0px 0px 10px #00c3ff;
+}
+
+section.glass .board .cards .card:hover h2 {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #0969f0;
+  font-weight: bolder;
+}
+
+section.glass .board .cards .card:hover p {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #0969f0;
+}
+
+section.glass .board .cards .card .card-info {
+  pointer-events: none;
+}
+
+section.glass .board .pagenation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.glass .board .pagenation button {
+  cursor: pointer;
+  margin: 1.5rem 0.5rem 0rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #426696;
+  color: white;
+}
+
+section.glass .board .pagenation button:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
+          box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
+  background: white;
+  color: #426696;
 }
 
 .circle1,
@@ -228,6 +294,9 @@ section.glass .board .cards .card {
 }
 
 @media screen and (max-width: 1480px) {
+  html {
+    font-size: 90%;
+  }
   section.glass {
     width: 70%;
   }
@@ -239,9 +308,6 @@ section.glass .board .cards .card {
 }
 
 @media screen and (max-width: 1068px) {
-  html {
-    font-size: 80%;
-  }
   section.glass {
     width: 80%;
   }
@@ -256,6 +322,9 @@ section.glass .board .cards .card {
   html {
     font-size: 70%;
   }
+  main.board {
+    height: 100%;
+  }
   section.glass {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -263,9 +332,53 @@ section.glass .board .cards .card {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .dashboard .user {
+    margin-bottom: 1.5rem;
+  }
+  .dashboard .user .hamburger {
+    position: absolute;
+    left: 5%;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .dashboard .user .hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #426696;
+    margin: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .dashboard .user .toggle .line1 {
+    -webkit-transform: rotate(45deg) translate(5px, 6px);
+            transform: rotate(45deg) translate(5px, 6px);
+  }
+  .dashboard .user .toggle .line2 {
+    opacity: 0;
+  }
+  .dashboard .user .toggle .line3 {
+    -webkit-transform: rotate(-45deg) translate(5px, -6px);
+            transform: rotate(-45deg) translate(5px, -6px);
+  }
+  .dashboard .show {
+    display: none;
+  }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 750px) {
+  section.glass {
+    height: 90%;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  section.glass {
+    height: 95%;
+  }
+}
+
+@media screen and (max-height: 580px) {
   section.glass {
     height: 100%;
   }
