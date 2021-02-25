@@ -23,7 +23,7 @@ function Join({ history }) {
   // };
 
   const onSubmitJoin = (e) => {
-    console.log(values);
+    console.log(e);
     e.preventDefault();
     insertUser(values)
       .then(() => {
@@ -117,4 +117,4 @@ function Join({ history }) {
   );
 }
 
-export default Join;
+export default React.memo(Join);

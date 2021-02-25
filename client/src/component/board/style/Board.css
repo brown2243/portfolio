@@ -87,25 +87,17 @@ section.glass .dashboard {
   border-bottom-left-radius: 2rem;
 }
 
-section.glass .dashboard .links {
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
 section.glass .dashboard .links .link {
   margin: 1rem;
 }
 
-section.glass .dashboard .links .link h2 {
+section.glass .dashboard .links .link:nth-child(1) h2 {
   width: 40%;
   padding: 0rem 2rem;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
-section.glass .dashboard .links .link h2:hover {
-  color: #0969f0;
-  font-weight: bolder;
+section.glass .dashboard .links .link:nth-child(1) h2:hover {
+  color: #006aff;
 }
 
 section.glass .dashboard .pro {
@@ -115,8 +107,8 @@ section.glass .dashboard .pro {
   border-radius: 1.5rem;
   color: white;
   padding: 1rem 0.5rem 1rem 0.5rem;
-  -webkit-transform: translate(0%, -20%);
-          transform: translate(0%, -20%);
+  -webkit-transform: translate(0%, -30%);
+          transform: translate(0%, -30%);
 }
 
 section.glass .dashboard .pro h2 {
@@ -165,7 +157,6 @@ section.glass .board .board-title input {
 
 section.glass .board .board-title button {
   cursor: pointer;
-  margin-right: 2.5rem;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
@@ -177,6 +168,11 @@ section.glass .board .board-title button {
   transition: 0.5s;
   background: #426696;
   color: white;
+}
+
+section.glass .board .board-title button.board_write {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 section.glass .board .board-title button:hover {
@@ -319,11 +315,13 @@ section.glass .board .pagenation button:hover {
 }
 
 @media screen and (max-width: 768px) {
-  html {
+  html,
+  body {
     font-size: 70%;
+    height: 100vh;
   }
   main.board {
-    height: 100%;
+    height: 100vh;
   }
   section.glass {
     width: 100%;

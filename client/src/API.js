@@ -22,6 +22,16 @@ function fetchAllPost() {
 function fetch4Post(page) {
   return Axios.post(BOARD + "/post/part", page);
 }
+function fetchPostDetail(id) {
+  return Axios.post(BOARD + "/detail", id);
+}
+
+function updatePost(post) {
+  return Axios.patch(BOARD + "/detail/update", post);
+}
+function deletePost(postID) {
+  return Axios.post(BOARD + "/detail/delete", postID);
+}
 
 // function updateUser() {
 //   return Axios.put(BOARD);
@@ -30,4 +40,11 @@ function fetch4Post(page) {
 //   return Axios.delete(BOARD);
 // }
 export { loginUser, fetchByToken, insertUser };
-export { insertPost, fetchAllPost, fetch4Post };
+export {
+  insertPost,
+  fetchAllPost,
+  fetch4Post,
+  fetchPostDetail,
+  updatePost,
+  deletePost,
+};

@@ -17,4 +17,4 @@ function User({ userInfo }) {
   );
 }
 
-export default User;
+export default React.memo(User);

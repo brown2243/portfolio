@@ -1,27 +1,79 @@
 .board {
   .board-title {
-    div {
+    .head_box {
+      margin-bottom: 1rem;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      p {
+        transform: translate(-20%, 50%);
+      }
+    }
+    .write_box {
+      width: 90%;
       input.title {
         width: 100%;
         outline: none;
         font-size: 1.5rem;
       }
+      textarea {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        height: 40vh;
+        margin-top: 1rem;
+        background: linear-gradient(
+          to right bottom,
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.3)
+        );
+        border: none;
+        width: 100%;
+        padding: 0.5rem;
+        border-bottom-right-radius: 1rem;
+        outline: none;
+      }
     }
-    textarea {
-      font-family: "Poppins", sans-serif;
-      font-size: 1.2rem;
-      height: 40vh;
+  }
+}
+.write_btn_box {
+  display: flex;
+  justify-content: left;
+  .write_btn {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .board {
+    .board-title {
+      .write_box {
+        width: 100%;
+      }
+    }
+  }
+  .write_btn_box {
+    justify-content: center;
+  }
+}
+// detail(상세보기)
+.write_box {
+  .detail_btn_box {
+    display: flex;
+    justify-content: flex-end;
+    .write_btn {
+      margin: 0rem;
       margin-top: 1rem;
-      background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.3)
-      );
-      border: none;
-      width: 100%;
-      padding: 0.5rem;
-      border-bottom-right-radius: 1rem;
-      outline: none;
+    }
+    .write_btn.warn {
+      background-color: tomato;
+      &:hover {
+        color: tomato;
+        background-color: white;
+        box-shadow: 0px 0px 20px tomato;
+      }
+    }
+
+    &.id_check {
+      display: none;
     }
   }
 }

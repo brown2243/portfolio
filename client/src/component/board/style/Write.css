@@ -1,10 +1,31 @@
-.board .board-title div input.title {
+.board .board-title .head_box {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.board .board-title .head_box p {
+  -webkit-transform: translate(-20%, 50%);
+          transform: translate(-20%, 50%);
+}
+
+.board .board-title .write_box {
+  width: 90%;
+}
+
+.board .board-title .write_box input.title {
   width: 100%;
   outline: none;
   font-size: 1.5rem;
 }
 
-.board .board-title textarea {
+.board .board-title .write_box textarea {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   height: 40vh;
@@ -16,5 +37,58 @@
   padding: 0.5rem;
   border-bottom-right-radius: 1rem;
   outline: none;
+}
+
+.write_btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.write_btn_box .write_btn {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .board .board-title .write_box {
+    width: 100%;
+  }
+  .write_btn_box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.write_box .detail_btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.write_box .detail_btn_box .write_btn {
+  margin: 0rem;
+  margin-top: 1rem;
+}
+
+.write_box .detail_btn_box .write_btn.warn {
+  background-color: tomato;
+}
+
+.write_box .detail_btn_box .write_btn.warn:hover {
+  color: tomato;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 20px tomato;
+          box-shadow: 0px 0px 20px tomato;
+}
+
+.write_box .detail_btn_box.id_check {
+  display: none;
 }
 /*# sourceMappingURL=Write.css.map */

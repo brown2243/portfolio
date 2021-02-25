@@ -1,10 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function Post({ idx, post }) {
-  const onClickDetail = (e) => {};
+  const history = useHistory();
+  const onClickDetail = (e) => {
+    e.preventDefault();
+    history.push(`board/detail/${post._id}`);
+  };
   return (
     <>
-      <div className="card">
+      <div className="card" onClick={onClickDetail}>
         <div className="card-info">
           <h2>{post.title}</h2>
           <p>작성자 {post.writer}님</p>
@@ -14,4 +19,4 @@ function Post({ idx, post }) {
   );
 }
 
-export default Post;
+export default React.memo(Post);

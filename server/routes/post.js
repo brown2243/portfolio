@@ -41,4 +41,39 @@ router.route("/post/part").post(async (req, res, next) => {
   }
 });
 
+router.route("/detail").post(async (req, res, next) => {
+  try {
+    const post = await Post.find({ _id: req.body.id });
+    console.log("post는", post);
+    res.status(200).json(post[0]);
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
+});
+
+router.route("/detail/update").patch(async (req, res, next) => {
+  try {
+    const post = await Post.update(
+      { _id: req.body.id },
+      { title: req.body.title, content: req.body.content }
+    );
+    console.log("update Post", post);
+    res.status(200).json(post);
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
+});
+router.route("/detail/delete").post(async (req, res, next) => {
+  try {
+    const post = await Post.deleteOne({ _id: req.body.id });
+    console.log("delete Post", post);
+    res.status(200).json(post);
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
+});
+
 module.exports = router;

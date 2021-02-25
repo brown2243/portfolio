@@ -64,16 +64,15 @@ section.glass {
     border-bottom-left-radius: 2rem;
 
     .links {
-      transition: 2s;
       .link {
         margin: 1rem;
-        h2 {
-          width: 40%;
-          padding: 0rem 2rem;
-          transition: 0.2s;
-          &:hover {
-            color: #0969f0;
-            font-weight: bolder;
+        &:nth-child(1) {
+          h2 {
+            width: 40%;
+            padding: 0rem 2rem;
+            &:hover {
+              color: #006aff;
+            }
           }
         }
       }
@@ -84,7 +83,7 @@ section.glass {
       border-radius: 1.5rem;
       color: white;
       padding: 1rem 0.5rem 1rem 0.5rem;
-      transform: translate(0%, -20%);
+      transform: translate(0%, -30%);
       h2 {
         font-weight: 600;
         color: white;
@@ -117,7 +116,6 @@ section.glass {
       }
       button {
         cursor: pointer;
-        margin-right: 2.5rem;
         font-size: 1.2rem;
         font-weight: bold;
         border: none;
@@ -128,6 +126,9 @@ section.glass {
         transition: 0.5s;
         background: #426696;
         color: white;
+        &.board_write {
+          transform: translateX(-50%);
+        }
         &:hover {
           box-shadow: 0px 0px 20px rgba(66, 102, 150, 0.8);
           background: white;
@@ -242,11 +243,14 @@ section.glass {
   }
 }
 @media screen and (max-width: 768px) {
-  html {
+  html,
+  body {
     font-size: 70%;
+    height: 100vh;
   }
+
   main.board {
-    height: 100%;
+    height: 100vh;
   }
   section.glass {
     width: 100%;

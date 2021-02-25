@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./style/Write.css";
 import { fetchByToken, insertPost } from "../../API";
-import User from "./parts/User";
+import Dashboard from "./parts/Dashboard";
 
 function Write({ history }) {
   const [user, setUser] = useState({});
@@ -19,11 +18,6 @@ function Write({ history }) {
         .catch((err) => console.log(err));
     }
   }, []);
-
-  const onClickLogout = (e) => {
-    localStorage.clear();
-    window.location.replace("/board");
-  };
 
   const writePost = (e) => {
     console.log("writePost");
@@ -48,44 +42,13 @@ function Write({ history }) {
     <>
       <main className="board">
         <section className="glass">
-          <div className="dashboard">
-            <div className="user">
-              <User userInfo={user} />
-            </div>
+          <Dashboard user={user} />
 
-            <div className="links">
-              <div className="link">
-                <Link to="/board">
-                  <h2>Board</h2>
-                </Link>
-              </div>
-              <div className="link">
-                <h2>Games</h2>
-              </div>
-              <div className="link">
-                <h2>New</h2>
-              </div>
-              <div className="link">
-                <h2>Library</h2>
-              </div>
-            </div>
-            {/* 로그인 */}
-            {user ? (
-              <div className="pro" onClick={onClickLogout}>
-                <h2>LogOut!</h2>
-              </div>
-            ) : (
-              <Link to="/board/login">
-                <div className="pro">
-                  <h2>Join or Login!</h2>
-                </div>
-              </Link>
-            )}
-          </div>
-          <form method="POST" onSubmit={writePost}>
-            <div className="board">
+          <div className="board">
+            <form method="POST" onSubmit={writePost}>
+              <div className="box"></div>
               <div className="board-title">
-                <div>
+                <div className="write_box">
                   <h1>Title</h1>
                   <input
                     type="text"
@@ -100,11 +63,15 @@ function Write({ history }) {
                     id="content"
                     required
                   />
-                  <button type="submit">POST</button>
+                  <div className="write_btn_box">
+                    <button className="write_btn" type="submit">
+                      POST
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </section>
       </main>
 
@@ -114,4 +81,4 @@ function Write({ history }) {
   );
 }
 
-export default Write;
+export default React.memo(Write);
