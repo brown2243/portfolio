@@ -3,3 +3,4 @@ export { default as Login } from "./Login";
 export { default as Join } from "./Join";
 export { default as Write } from "./Write";
 export { default as Detail } from "./Detail";
+export { default as Setting } from "./Setting";

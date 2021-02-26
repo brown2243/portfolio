@@ -267,6 +267,11 @@ section.glass .board .pagenation button:hover {
   color: #426696;
 }
 
+section.glass .board .pagenation .active {
+  background: white;
+  color: #426696;
+}
+
 .circle1,
 .circle2 {
   z-index: 1;
@@ -317,7 +322,7 @@ section.glass .board .pagenation button:hover {
 @media screen and (max-width: 768px) {
   html,
   body {
-    font-size: 70%;
+    font-size: 80%;
     height: 100vh;
   }
   main.board {
@@ -329,6 +334,10 @@ section.glass .board .pagenation button:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  section.glass .board .board-title button {
+    min-width: 80px;
+    min-height: 50px;
   }
   .dashboard .user {
     margin-bottom: 1.5rem;

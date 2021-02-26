@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { loginUser } from "../../API";
 import "./style/Login.css";
@@ -8,9 +8,14 @@ function Login({ history }) {
     id: "",
     pwd: "",
   });
+
+  const Id = useRef(null);
+  useEffect(() => {
+    Id.current.focus();
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(values.id, values.pwd);
     setValues({ ...values, [name]: value });
   };
 
@@ -19,12 +24,14 @@ function Login({ history }) {
     console.log("로그인");
     loginUser(values)
       .then((res) => {
+        if (res.data.length < 20) {
+          return alert(res.data);
+        }
         localStorage.setItem("JWT", res.data);
         console.log("로그인 성공");
         history.push("/board");
       })
       .catch((err) => {
-        console.error(err);
         console.error("로그인 오류!", err);
       });
   };
@@ -40,6 +47,7 @@ function Login({ history }) {
           <form method="POST" onSubmit={onSubmitLogin}>
             <div className="form">
               <input
+                ref={Id}
                 type="text"
                 name="id"
                 onChange={handleChange}

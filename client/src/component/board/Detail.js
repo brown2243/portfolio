@@ -21,34 +21,33 @@ function Detail({ history, match }) {
   const contentRef = useRef(null);
 
   useEffect(() => {
+    console.time("detail time");
     console.log("Detail useEffect");
-    // 로그인체크
-    const TOKEN = localStorage.getItem("JWT");
-    if (TOKEN) {
-      fetchByToken({ token: TOKEN })
-        .then((res) => {
-          setUser(res.data);
-          checkUser(res.data.id);
-        })
-        .catch((err) => console.log(err));
-    }
     // 게시글
     fetchPostDetail({ id: match.params.id })
       .then((res) => {
         setPost(res.data);
         setTitle(res.data.title);
         setContent(res.data.content);
+        // 로그인체크
+        const TOKEN = localStorage.getItem("JWT");
+        if (TOKEN) {
+          fetchByToken({ token: TOKEN })
+            .then((response) => {
+              setUser(response.data);
+              checkUser(response.data.id, res.data.writer);
+            })
+            .catch((err) => console.log(err));
+        }
       })
       .catch((err) => console.log(err));
   }, [match.params.id]);
 
-  // 현재 사용자가 게시글 작성자인지 확인
-  // 수정,삭제 가능 여부
-  const checkUser = (id) => {
-    console.log("checkUser");
-    if (user.id === post.id) {
+  const checkUser = (id, writer) => {
+    if (id !== undefined && id === writer) {
       detail_btn_box.current.classList.remove("id_check");
     }
+    console.timeEnd("detail time");
   };
 
   const changeTitle = (e) => setTitle(e.target.value);
@@ -74,7 +73,6 @@ function Detail({ history, match }) {
   // 업데이트 전송
   const sendUpdatePost = () => {
     const send_update = {
-      // ...post,
       id: post._id,
       title: title,
       content: content,

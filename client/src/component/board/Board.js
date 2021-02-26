@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/Board.css";
 import Post from "./parts/Post";
@@ -30,12 +30,25 @@ function Board() {
         })
         .catch((err) => console.log(err));
     }
+    // 첫 1번 클릭된 채로 시작하는거 안하기로 함
+    // setTimeout(() => {
+    //   const firstBtn = document.querySelector(".page_btn");
+    //   firstBtn.classList.add("active");
+    // }, 200);
   }, [postLength, pages]);
 
+  // 페이지 네이션
   const onClickPage = (e) => {
     e.preventDefault();
     let startPost;
     let endPost;
+    // 버튼 클릭 된 것 같은 효과
+    const btns = document.querySelectorAll(".page_btn");
+    btns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    // post 4개 가져오는 로직
     endPost = postLength - (Number(e.target.name) - 1) * limit;
     startPost = postLength - Number(e.target.name) * limit;
     if (startPost < 0) startPost = 0;
@@ -83,7 +96,12 @@ function Board() {
               {Array(pages)
                 .fill()
                 .map((v, i) => (
-                  <button key={i} onClick={onClickPage} name={i + 1}>
+                  <button
+                    className="page_btn"
+                    key={i}
+                    onClick={onClickPage}
+                    name={i + 1}
+                  >
                     {i + 1}
                   </button>
                 ))}

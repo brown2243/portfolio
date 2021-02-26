@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function User({ userInfo }) {
   return (
@@ -6,7 +7,10 @@ function User({ userInfo }) {
       {userInfo.name ? (
         <>
           <h3>Hello! {userInfo.name}😎</h3>
-          <p>{userInfo.manager === 1 ? "Manager" : "User"} Member</p>
+
+          <Link to="/board/setting">
+            <p>Member Setting</p>
+          </Link>
         </>
       ) : (
         <h3>
