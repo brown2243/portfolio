@@ -74,7 +74,7 @@ function Join({ history }) {
               <input
                 type="Password"
                 name="pwd2"
-                autocomplete="off"
+                autoComplete="off"
                 onChange={handleChange}
                 required
               />
@@ -86,7 +86,7 @@ function Join({ history }) {
               <input
                 type="text"
                 name="name"
-                autocomplete="off"
+                autoComplete="off"
                 onChange={handleChange}
                 required
               />
@@ -98,7 +98,7 @@ function Join({ history }) {
               <input
                 type="number"
                 name="age"
-                autocomplete="off"
+                autoComplete="off"
                 onChange={handleChange}
                 required
               />

@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function Post({ idx, post }) {
+function Post({ post }) {
   const history = useHistory();
   const onClickDetail = (e) => {
     e.preventDefault();

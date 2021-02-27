@@ -1,9 +1,6 @@
 const express = require("express");
 const Post = require("../schemas/post");
-const Comment = require("../schemas/comment");
 const router = express.Router();
-const jwt = require("jsonwebtoken");
-const SECRET_TOKEN = require("../jwt");
 
 router.route("/write").post(async (req, res, next) => {
   try {
@@ -54,7 +51,7 @@ router.route("/detail").post(async (req, res, next) => {
 
 router.route("/detail/update").patch(async (req, res, next) => {
   try {
-    const post = await Post.update(
+    const post = await Post.updateOne(
       { _id: req.body.id },
       { title: req.body.title, content: req.body.content }
     );
@@ -65,9 +62,10 @@ router.route("/detail/update").patch(async (req, res, next) => {
     next(err);
   }
 });
+
 router.route("/detail/delete").post(async (req, res, next) => {
   try {
-    const post = await Post.deleteOne({ _id: req.body.id });
+    const post = await Post.deleteOne({ id: req.body.id });
     console.log("delete Post", post);
     res.status(200).json(post);
   } catch (err) {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .board .board-title .head_box {
   margin-bottom: 1rem;
   display: -webkit-box;
@@ -61,6 +62,33 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .board .board-title .Setting_box {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .board .board-title .Setting_box .Setting_title {
+    width: 80%;
+  }
+  .board .board-title .Setting_box .Setting_title h1 {
+    width: 40%;
+  }
+  .board .board-title .Setting_box .Setting_title .delete_box button.delete {
+    min-width: 10vw;
+    min-height: 8vh;
+  }
+  .board .board-title .Setting_box .box {
+    width: 80%;
+  }
+  .board .board-title .Setting_box .box input.setting {
+    width: 50%;
+  }
+  .board .board-title .Setting_box .box button.setting_btn {
+    min-width: 10vw;
+    min-height: 8vh;
+  }
 }
 
 .write_box .detail_btn_box {
@@ -107,6 +135,7 @@
 }
 
 .board-title .Setting_box .box {
+  position: relative;
   width: 100%;
   margin-top: 1rem;
   display: -webkit-box;
@@ -124,6 +153,31 @@
   font-size: 1.5rem;
   border-top-right-radius: 0rem;
   border-bottom-right-radius: 0rem;
+  padding-left: 1rem;
+}
+
+.board-title .Setting_box .box input.setting::-webkit-input-placeholder {
+  color: tomato;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.board-title .Setting_box .box input.setting:-ms-input-placeholder {
+  color: tomato;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.board-title .Setting_box .box input.setting::-ms-input-placeholder {
+  color: tomato;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.board-title .Setting_box .box input.setting::placeholder {
+  color: tomato;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .board-title .Setting_box .box p {
@@ -136,7 +190,60 @@
 .board-title .Setting_box .box button.setting_btn {
   border-radius: 1rem;
   font-size: 1rem;
-  min-width: 4vw;
+  min-width: 5vw;
   min-height: 8vh;
+}
+
+.board-title .Setting_box .box .update {
+  background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#6cdbeb));
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.board-title .Setting_box .box .update:hover {
+  background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#6cdbeb));
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.board-title .Setting_box .box .update.clicked {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ff62), to(#13a7eb));
+  background: linear-gradient(#00ff62, #13a7eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.board-title .Setting_box .box .update.clicked::after {
+  content: "중";
+}
+
+.board-title .Setting_box .Setting_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.board-title .Setting_box .Setting_title h1 {
+  -webkit-transform: translate(20%, -10%);
+          transform: translate(20%, -10%);
+}
+
+.board-title .Setting_box .Setting_title .delete_box button.delete {
+  background: tomato;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  min-width: 8vw;
+  min-height: 8vh;
+}
+
+.board-title .Setting_box .Setting_title .delete_box button.delete:hover {
+  color: tomato;
+  background: whitesmoke;
+  -webkit-box-shadow: 0px 0px 20px tomato;
+          box-shadow: 0px 0px 20px tomato;
 }
 /*# sourceMappingURL=Write.css.map */

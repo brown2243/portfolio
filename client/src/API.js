@@ -33,13 +33,14 @@ function deletePost(postID) {
   return Axios.post(BOARD + "/detail/delete", postID);
 }
 
-// function updateUser() {
-//   return Axios.put(BOARD);
-// }
-// function deleteUser() {
-//   return Axios.delete(BOARD);
-// }
-export { loginUser, fetchByToken, insertUser };
+function updateUser(update) {
+  return Axios.patch(BOARD + "/setting/update", update);
+}
+function deleteUser(user) {
+  return Axios.post(BOARD + "/setting/delete", user);
+}
+
+export { loginUser, fetchByToken, insertUser, updateUser, deleteUser };
 export {
   insertPost,
   fetchAllPost,

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/Board.css";
 import Post from "./parts/Post";
@@ -35,7 +35,7 @@ function Board() {
     //   const firstBtn = document.querySelector(".page_btn");
     //   firstBtn.classList.add("active");
     // }, 200);
-  }, [postLength, pages]);
+  }, [postLength]);
 
   // 페이지 네이션
   const onClickPage = (e) => {

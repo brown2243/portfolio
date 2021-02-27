@@ -247,6 +247,19 @@ section.glass {
       flex: 3;
     }
   }
+  .board {
+    .board-title {
+      .Setting_box {
+        width: 100%;
+        .Setting_title {
+          width: 90%;
+        }
+        .box {
+          width: 90%;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   html,
@@ -271,6 +284,10 @@ section.glass {
     }
   }
   .dashboard {
+    .pro {
+      width: 100%;
+      margin-top: 1rem;
+    }
     .user {
       margin-bottom: 1.5rem;
       .hamburger {

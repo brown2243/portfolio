@@ -1,6 +1,5 @@
 const express = require("express");
 const User = require("../schemas/user");
-const Comment = require("../schemas/comment");
 const bcrypt = require("bcrypt");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
@@ -56,24 +55,48 @@ router.route("/user").post(async (req, res, next) => {
       age: req.body.age,
     });
     console.log(user);
-    res.status(201).json(user);
+    res.status(200).json(user);
   } catch (err) {
     console.error(err);
     next(err);
   }
 });
 
-// router.get("/:id/comments", async (req, res, next) => {
-//   try {
-//     const comments = await Comment.find({ commenter: req.params.id }).populate(
-//       "commenter"
-//     );
-//     console.log(comments);
-//     res.json(comments);
-//   } catch (err) {
-//     console.error(err);
-//     next(err);
-//   }
-// });
+// 정보 수정
+router.route("/setting/update").patch(async (req, res, next) => {
+  try {
+    console.log("user update 시작");
+    const updateObj = {};
+    const [ID, NAME, VALUE] = req.body;
+
+    if (NAME !== "pwd") {
+      updateObj[NAME] = VALUE;
+    } else {
+      const encryptedPassowrd = bcrypt.hashSync(VALUE, 10); // sync
+      updateObj[NAME] = encryptedPassowrd;
+    }
+
+    const user = await User.updateOne({ _id: ID }, updateObj);
+    console.log("update user 완료", user);
+    res.status(200).json(user);
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
+});
+
+// 회원 삭제
+router.route("/setting/delete").post(async (req, res, next) => {
+  try {
+    console.log(req.body);
+
+    const user = await User.deleteOne({ _id: req.body.id });
+    console.log("delete User", user);
+    res.status(200).json(user);
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
+});
 
 module.exports = router;

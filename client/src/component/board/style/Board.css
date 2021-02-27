@@ -317,6 +317,15 @@ section.glass .board .pagenation .active {
         -ms-flex: 3;
             flex: 3;
   }
+  .board .board-title .Setting_box {
+    width: 100%;
+  }
+  .board .board-title .Setting_box .Setting_title {
+    width: 90%;
+  }
+  .board .board-title .Setting_box .box {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -338,6 +347,10 @@ section.glass .board .pagenation .active {
   section.glass .board .board-title button {
     min-width: 80px;
     min-height: 50px;
+  }
+  .dashboard .pro {
+    width: 100%;
+    margin-top: 1rem;
   }
   .dashboard .user {
     margin-bottom: 1.5rem;

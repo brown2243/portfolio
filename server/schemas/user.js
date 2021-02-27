@@ -19,7 +19,6 @@ const userSchema = new Schema({
     type: Number,
     required: true,
   },
-  comment: String,
   postArray: Array,
   createdAt: {
     type: Date,
