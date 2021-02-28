@@ -12,12 +12,11 @@ function Write({ history }) {
     if (TOKEN) {
       fetchByToken({ token: TOKEN })
         .then((res) => {
-          setUser(res.data);
-          console.log(user);
+          if (!user._id) setUser(res.data);
         })
         .catch((err) => console.log(err));
     }
-  }, []);
+  }, [user]);
 
   const writePost = (e) => {
     console.log("writePost");

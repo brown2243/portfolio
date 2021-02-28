@@ -23,25 +23,51 @@ function Detail({ history, match }) {
   useEffect(() => {
     console.time("detail time");
     console.log("Detail useEffect");
+    // 로그인체크
+    const TOKEN = localStorage.getItem("JWT");
+    if (TOKEN) {
+      fetchByToken({ token: TOKEN })
+        .then((res) => {
+          setUser(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
     // 게시글
     fetchPostDetail({ id: match.params.id })
       .then((res) => {
         setPost(res.data);
         setTitle(res.data.title);
         setContent(res.data.content);
-        // 로그인체크
-        const TOKEN = localStorage.getItem("JWT");
-        if (TOKEN) {
-          fetchByToken({ token: TOKEN })
-            .then((response) => {
-              setUser(response.data);
-              checkUser(response.data.id, res.data.writer);
-            })
-            .catch((err) => console.log(err));
-        }
       })
       .catch((err) => console.log(err));
-  }, [match.params.id]);
+
+    Promise.all([fetchByToken, fetchPostDetail]).then(() =>
+      checkUser(user.id, post.writer)
+    );
+  }, [match.params.id, user.id, post.writer]);
+
+  // useEffect(() => {
+  //   console.time("detail time");
+  //   console.log("Detail useEffect");
+  //   // 게시글
+  //   fetchPostDetail({ id: match.params.id })
+  //     .then((res) => {
+  //       setPost(res.data);
+  //       setTitle(res.data.title);
+  //       setContent(res.data.content);
+  //       // 로그인체크
+  //       const TOKEN = localStorage.getItem("JWT");
+  //       if (TOKEN) {
+  //         fetchByToken({ token: TOKEN })
+  //           .then((response) => {
+  //             setUser(response.data);
+  //             checkUser(response.data.id, res.data.writer);
+  //           })
+  //           .catch((err) => console.log(err));
+  //       }
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, [match.params.id]);
 
   const checkUser = (id, writer) => {
     if (id !== undefined && id === writer) {
@@ -79,9 +105,7 @@ function Detail({ history, match }) {
     };
 
     updatePost(send_update)
-      .then(() => {
-        console.log("게시물 수정 성공");
-      })
+      .then((res) => console.log("게시물 수정 성공"))
       .catch((err) => console.log("게시물 수정 실패", err));
   };
 

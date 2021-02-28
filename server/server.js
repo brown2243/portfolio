@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 const connect = require("./schemas");
-const indexRouter = require("./routes/index");
+// const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/post");
 
