@@ -158,25 +158,25 @@
 
 .board-title .Setting_box .box input.setting::-webkit-input-placeholder {
   color: tomato;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .board-title .Setting_box .box input.setting:-ms-input-placeholder {
   color: tomato;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .board-title .Setting_box .box input.setting::-ms-input-placeholder {
   color: tomato;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .board-title .Setting_box .box input.setting::placeholder {
   color: tomato;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 

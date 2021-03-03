@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: red;
+}
+
+.skill {
+  text-align: center;
+  background-color: rgba(36, 241, 36, 0.267);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.skill .icons_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1000px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skill .icons_container .icon_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 40px;
+}
+
+.skill .icons_container .icon_container .icon {
+  border-radius: 2rem;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  -webkit-box-shadow: 0px 0px 20px #273379;
+          box-shadow: 0px 0px 20px #273379;
+}
+
+.skill .icons_container .icon_container .html {
+  background-size: 140px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
+}
+
+.skill .icons_container .icon_container .html:hover {
+  -webkit-animation: App-logo-spin 1s linear;
+          animation: App-logo-spin 1s linear;
+}
+
+.skill .icons_container .icon_container .css {
+  background-size: 100px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
+}
+
+.skill .icons_container .icon_container .css:hover {
+  -webkit-animation: App-logo-spin 10s linear;
+          animation: App-logo-spin 10s linear;
+}
+
+.skill .icons_container .icon_container .js {
+  background-size: 155px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg);
+}
+
+.skill .icons_container .icon_container .js:hover {
+  -webkit-animation: App-logo-spin 10s linear;
+          animation: App-logo-spin 10s linear;
+}
+
+.skill .icons_container .icon_container .react {
+  background-size: 240px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg);
+}
+
+.skill .icons_container .icon_container .react:hover {
+  -webkit-animation: App-logo-spin 10s linear;
+          animation: App-logo-spin 10s linear;
+}
+
+.skill .icons_container .icon_container .nodejs {
+  background-size: 130px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg);
+}
+
+.skill .icons_container .icon_container .nodejs:hover {
+  -webkit-animation: App-logo-spin 10s linear;
+          animation: App-logo-spin 10s linear;
+}
+
+.skill .icons_container .icon_container .python {
+  background-size: 130px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
+}
+
+.skill .icons_container .icon_container .python:hover {
+  -webkit-animation: App-logo-spin 10s linear;
+          animation: App-logo-spin 10s linear;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .skill .icons_container {
+    width: 60vw;
+  }
+}
+/*# sourceMappingURL=App.css.map */

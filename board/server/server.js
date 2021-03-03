@@ -1,10 +1,8 @@
 const express = require("express");
-// const path = require("path");
 const morgan = require("morgan");
 const cors = require("cors");
 
 const connect = require("./schemas");
-// const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/post");
 
@@ -14,11 +12,9 @@ app.set("port", process.env.PORT || 5000);
 connect();
 
 app.use(morgan("dev"));
-// app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// app.use("/", indexRouter);
 app.use("/board", cors("http://localhost:3000"), usersRouter);
 app.use("/board", cors("http://localhost:3000"), postsRouter);
 
