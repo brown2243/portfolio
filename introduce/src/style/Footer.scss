@@ -1,0 +1,142 @@
+footer {
+  height: 100vh;
+  bottom: -100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 162, 255);
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+
+  h1 {
+    font-size: 4rem;
+    cursor: pointer;
+    .box {
+      text-align: center;
+    }
+    .hand {
+      pointer-events: none;
+      display: inline-block;
+      animation: sayHi 0.5s ease infinite alternate;
+    }
+    .write {
+      pointer-events: none;
+      display: inline-block;
+      // animation: say 1s infinite alternate;
+    }
+  }
+
+  .sun {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgb(255, 148, 9);
+    transform: translate(-20%, -20%);
+  }
+  .sunlight {
+    position: relative;
+    top: 200px;
+    left: 200px;
+    width: 80px;
+    height: 20px;
+    border-radius: 20px;
+    // background: rgb(241, 7, 7);
+    background: rgb(255, 169, 58);
+    z-index: -1;
+  }
+  .sunlight1 {
+    transform: translate(110%, -600%) rotate(-10deg);
+  }
+  .sunlight2 {
+    transform: translate(120%, -300%) rotate(5deg);
+  }
+  .sunlight3 {
+    transform: translate(80%, 0%) rotate(35deg);
+  }
+  .sunlight4 {
+    transform: translate(0%, 150%) rotate(60deg);
+  }
+  .sunlight5 {
+    transform: translate(-100%, 200%) rotate(80deg);
+  }
+  .sunlight6 {
+    transform: translate(-200%, 100%) rotate(100deg);
+  }
+  .cloud {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    .piece1 {
+      background: white;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      transform: translate(20%, 0%);
+    }
+    .piece2 {
+      background: white;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+    .piece3 {
+      transform: translate(-20%, 0%);
+      background: white;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .cloud1 {
+    top: 20%;
+    right: 55%;
+    animation: cloudMove linear 160s infinite;
+  }
+  .cloud2 {
+    top: 4%;
+    right: 25%;
+    animation: cloudMove ease 300s infinite;
+  }
+  .cloud3 {
+    top: 12%;
+    right: -10%;
+    animation: cloudMove ease-in-out 200s infinite;
+  }
+
+  .ground {
+    height: 20vh;
+    width: 100vw;
+    background: white;
+    bottom: 0;
+    position: absolute;
+    border-radius: 20%;
+    transform: translate(0%, 50%);
+  }
+}
+@keyframes sayHi {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes say {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes cloudMove {
+  to {
+    right: 110%;
+  }
+}

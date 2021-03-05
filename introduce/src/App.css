@@ -26,16 +26,16 @@ code {
 }
 
 .wrapper-parallax {
-  -webkit-box-shadow: 0px 0px 20px black;
-          box-shadow: 0px 0px 20px black;
+  -webkit-box-shadow: 0px 0px 20px white;
+          box-shadow: 0px 0px 20px white;
 }
 
 header {
   width: 100%;
   height: 100vh;
-  background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50%;
+  background: black;
   top: 0;
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,222 +205,15 @@ header #introduce path:nth-child(21) {
           animation: line-ani 2s ease forwards 3.6s;
 }
 
-footer {
-  height: 100vh;
-  bottom: -100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: gray;
-  position: fixed;
-  z-index: -1;
-}
-
-header,
-footer,
-#scroll-animate-main {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-          transition-timing-function: cubic-bezier(0, 0, 0, 1);
-}
-
-.content {
-  height: 200vh;
-  z-index: 1;
-  position: relative;
-  background: beige;
-}
-
-.content .skill {
-  height: 50%;
-}
-
-.content .project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: bold;
-  height: 50%;
-}
-
-.App {
-  text-align: center;
-}
-
-.App .App-header {
-  min-height: 100vh;
-  background-color: #282c34;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: red;
-}
-
-.skill {
-  text-align: center;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.skill .icons_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 1000px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.skill .icons_container .icon_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 40px;
-}
-
-.skill .icons_container .icon_container .icon {
-  border-radius: 2rem;
-  height: 150px;
-  width: 150px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-color: white;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  -webkit-box-shadow: 0px 0px 20px #273379;
-          box-shadow: 0px 0px 20px #273379;
-}
-
-.skill .icons_container .icon_container .html {
-  background-size: 140px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
-}
-
-.skill .icons_container .icon_container .html:hover {
-  -webkit-animation: App-logo-spin 1s linear;
-          animation: App-logo-spin 1s linear;
-}
-
-.skill .icons_container .icon_container .css {
-  background-size: 100px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
-}
-
-.skill .icons_container .icon_container .css:hover {
-  -webkit-animation: App-logo-spin 10s linear;
-          animation: App-logo-spin 10s linear;
-}
-
-.skill .icons_container .icon_container .js {
-  background-size: 155px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg);
-}
-
-.skill .icons_container .icon_container .js:hover {
-  -webkit-animation: App-logo-spin 10s linear;
-          animation: App-logo-spin 10s linear;
-}
-
-.skill .icons_container .icon_container .react {
-  background-size: 240px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg);
-}
-
-.skill .icons_container .icon_container .react:hover {
-  -webkit-animation: App-logo-spin 10s linear;
-          animation: App-logo-spin 10s linear;
-}
-
-.skill .icons_container .icon_container .nodejs {
-  background-size: 130px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg);
-}
-
-.skill .icons_container .icon_container .nodejs:hover {
-  -webkit-animation: App-logo-spin 10s linear;
-          animation: App-logo-spin 10s linear;
-}
-
-.skill .icons_container .icon_container .python {
-  background-size: 130px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
-}
-
-.skill .icons_container .icon_container .python:hover {
-  -webkit-animation: App-logo-spin 10s linear;
-          animation: App-logo-spin 10s linear;
-}
-
-@media screen and (max-height: 720px) {
-  header {
-    height: 720px;
-  }
-  .content {
-    height: 1440px;
-  }
-  footer {
-    height: 720px;
-    bottom: -720px;
+@-webkit-keyframes fall {
+  to {
+    margin-top: 900px;
   }
 }
 
-@media screen and (max-width: 1280px) {
-  .skill .icons_container {
-    width: 80vw;
+@keyframes fall {
+  to {
+    margin-top: 900px;
   }
 }
 
@@ -454,6 +247,470 @@ footer,
   }
 }
 
+footer {
+  height: 100vh;
+  bottom: -100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #00a2ff;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+}
+
+footer h1 {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+footer h1 .box {
+  text-align: center;
+}
+
+footer h1 .hand {
+  pointer-events: none;
+  display: inline-block;
+  -webkit-animation: sayHi 0.5s ease infinite alternate;
+          animation: sayHi 0.5s ease infinite alternate;
+}
+
+footer h1 .write {
+  pointer-events: none;
+  display: inline-block;
+}
+
+footer .sun {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #ff9409;
+  -webkit-transform: translate(-20%, -20%);
+          transform: translate(-20%, -20%);
+}
+
+footer .sunlight {
+  position: relative;
+  top: 200px;
+  left: 200px;
+  width: 80px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ffa93a;
+  z-index: -1;
+}
+
+footer .sunlight1 {
+  -webkit-transform: translate(110%, -600%) rotate(-10deg);
+          transform: translate(110%, -600%) rotate(-10deg);
+}
+
+footer .sunlight2 {
+  -webkit-transform: translate(120%, -300%) rotate(5deg);
+          transform: translate(120%, -300%) rotate(5deg);
+}
+
+footer .sunlight3 {
+  -webkit-transform: translate(80%, 0%) rotate(35deg);
+          transform: translate(80%, 0%) rotate(35deg);
+}
+
+footer .sunlight4 {
+  -webkit-transform: translate(0%, 150%) rotate(60deg);
+          transform: translate(0%, 150%) rotate(60deg);
+}
+
+footer .sunlight5 {
+  -webkit-transform: translate(-100%, 200%) rotate(80deg);
+          transform: translate(-100%, 200%) rotate(80deg);
+}
+
+footer .sunlight6 {
+  -webkit-transform: translate(-200%, 100%) rotate(100deg);
+          transform: translate(-200%, 100%) rotate(100deg);
+}
+
+footer .cloud {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .cloud .piece1 {
+  background: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translate(20%, 0%);
+          transform: translate(20%, 0%);
+}
+
+footer .cloud .piece2 {
+  background: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+footer .cloud .piece3 {
+  -webkit-transform: translate(-20%, 0%);
+          transform: translate(-20%, 0%);
+  background: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+footer .cloud1 {
+  top: 20%;
+  right: 55%;
+  -webkit-animation: cloudMove linear 160s infinite;
+          animation: cloudMove linear 160s infinite;
+}
+
+footer .cloud2 {
+  top: 4%;
+  right: 25%;
+  -webkit-animation: cloudMove ease 300s infinite;
+          animation: cloudMove ease 300s infinite;
+}
+
+footer .cloud3 {
+  top: 12%;
+  right: -10%;
+  -webkit-animation: cloudMove ease-in-out 200s infinite;
+          animation: cloudMove ease-in-out 200s infinite;
+}
+
+footer .ground {
+  height: 20vh;
+  width: 100vw;
+  background: white;
+  bottom: 0;
+  position: absolute;
+  border-radius: 20%;
+  -webkit-transform: translate(0%, 50%);
+          transform: translate(0%, 50%);
+}
+
+@-webkit-keyframes sayHi {
+  from {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  to {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@keyframes sayHi {
+  from {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  to {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@-webkit-keyframes say {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes say {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@-webkit-keyframes cloudMove {
+  to {
+    right: 110%;
+  }
+}
+
+@keyframes cloudMove {
+  to {
+    right: 110%;
+  }
+}
+
+header,
+footer,
+#scroll-animate-main {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+          transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+.content {
+  height: 200vh;
+  z-index: 5;
+  position: relative;
+  background: #f5f4f0;
+}
+
+.content .skill {
+  height: 50%;
+}
+
+.content .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  background: green;
+  height: 50%;
+}
+
+.skill {
+  text-align: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill .title h1 {
+  font-size: 4rem;
+}
+
+.skill .icons_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1000px;
+}
+
+.skill .icons_container .icon_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 40px;
+}
+
+.skill .icons_container .icon_container .icon {
+  cursor: pointer;
+  border-radius: 2rem;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  -webkit-box-shadow: 0px 0px 20px #e5dbaf;
+          box-shadow: 0px 0px 20px #e5dbaf;
+}
+
+.skill .icons_container .icon_container .icon:hover {
+  -webkit-box-shadow: 0px 0px 10px #039aff;
+          box-shadow: 0px 0px 10px #039aff;
+}
+
+.skill .icons_container .icon_container .html {
+  background-size: 140px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
+}
+
+.skill .icons_container .icon_container .css {
+  background-size: 100px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
+}
+
+.skill .icons_container .icon_container .js {
+  background-size: 155px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg);
+}
+
+.skill .icons_container .icon_container .react {
+  background-color: black;
+  background-size: 240px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg);
+}
+
+.skill .icons_container .icon_container .nodejs {
+  background-size: 130px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg);
+}
+
+.skill .icons_container .icon_container .python {
+  background-size: 130px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
+}
+
+.skill .icons_container .icon_container .etc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill .icons_container .icon_container .etc .circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: black;
+  margin: 5px;
+}
+
+.pop_detail {
+  cursor: pointer;
+  width: 55vw;
+  height: 60vh;
+  background: #f5f4f0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(40%, 200%);
+          transform: translate(40%, 200%);
+  opacity: 0;
+  z-index: -1;
+  -webkit-box-shadow: 5px 5px 20px gray;
+          box-shadow: 5px 5px 20px gray;
+}
+
+.pop_detail .detail_head {
+  pointer-events: none;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10vh;
+  background: gray;
+}
+
+.pop_detail .detail_head h3 {
+  font-size: 3rem;
+}
+
+.pop_detail .html {
+  background: tomato;
+}
+
+.pop_detail .css {
+  background: #2965f1;
+}
+
+.pop_detail .js {
+  background: yellow;
+}
+
+.pop_detail .react {
+  background: black;
+  color: #61dafb;
+}
+
+.pop_detail .nodejs {
+  background: #73ab63;
+}
+
+.pop_detail .python {
+  background: -webkit-gradient(linear, left top, right top, from(#376e9c), to(#ffce3d));
+  background: linear-gradient(to right, #376e9c, #ffce3d);
+}
+
+.pop_detail .detail_body {
+  pointer-events: none;
+  padding: 3rem;
+}
+
+.pop_detail .detail_body ul {
+  list-style: none;
+}
+
+.pop_detail .detail_body li {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-height: 720px) {
+  header {
+    height: 720px;
+  }
+  .content {
+    height: 1440px;
+  }
+  footer {
+    height: 720px;
+    bottom: -720px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .skill .icons_container {
+    width: 80vw;
+  }
+}
+
 @-webkit-keyframes App-logo-spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -473,6 +730,110 @@ footer,
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes pop_up {
+  from {
+    -webkit-transform: translate(40%, 200%);
+            transform: translate(40%, 200%);
+    opacity: 0;
+    z-index: -1;
+  }
+  to {
+    -webkit-transform: translate(40%, 40%);
+            transform: translate(40%, 40%);
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@keyframes pop_up {
+  from {
+    -webkit-transform: translate(40%, 200%);
+            transform: translate(40%, 200%);
+    opacity: 0;
+    z-index: -1;
+  }
+  to {
+    -webkit-transform: translate(40%, 40%);
+            transform: translate(40%, 40%);
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@-webkit-keyframes pop_down {
+  from {
+    -webkit-transform: translate(40%, 40%);
+            transform: translate(40%, 40%);
+    opacity: 1;
+    z-index: 2;
+  }
+  to {
+    -webkit-transform: translate(40%, 200%);
+            transform: translate(40%, 200%);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes pop_down {
+  from {
+    -webkit-transform: translate(40%, 40%);
+            transform: translate(40%, 40%);
+    opacity: 1;
+    z-index: 2;
+  }
+  to {
+    -webkit-transform: translate(40%, 200%);
+            transform: translate(40%, 200%);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes blurOn {
+  from {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  to {
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+}
+
+@keyframes blurOn {
+  from {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  to {
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+}
+
+@-webkit-keyframes blurOff {
+  from {
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+  to {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes blurOff {
+  from {
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+  to {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 /*# sourceMappingURL=App.css.map */

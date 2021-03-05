@@ -1,11 +1,5 @@
 import "./App.css";
-window.addEventListener("load", () => {
-  const logo = document.querySelectorAll("#introduce path");
-  console.log(logo);
-  for (let i = 0; i < logo.length; i++) {
-    console.log(`letter ${i + 1} is ${logo[i].getTotalLength()}`);
-  }
-});
+
 function Header() {
   return (
     <header className="Header">

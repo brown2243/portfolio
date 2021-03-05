@@ -1,0 +1,217 @@
+footer {
+  height: 100vh;
+  bottom: -100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #00a2ff;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+}
+
+footer h1 {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+footer h1 .box {
+  text-align: center;
+}
+
+footer h1 .hand {
+  pointer-events: none;
+  display: inline-block;
+  -webkit-animation: sayHi 0.5s ease infinite alternate;
+          animation: sayHi 0.5s ease infinite alternate;
+}
+
+footer h1 .write {
+  pointer-events: none;
+  display: inline-block;
+}
+
+footer .sun {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #ff9409;
+  -webkit-transform: translate(-20%, -20%);
+          transform: translate(-20%, -20%);
+}
+
+footer .sunlight {
+  position: relative;
+  top: 200px;
+  left: 200px;
+  width: 80px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ffa93a;
+  z-index: -1;
+}
+
+footer .sunlight1 {
+  -webkit-transform: translate(110%, -600%) rotate(-10deg);
+          transform: translate(110%, -600%) rotate(-10deg);
+}
+
+footer .sunlight2 {
+  -webkit-transform: translate(120%, -300%) rotate(5deg);
+          transform: translate(120%, -300%) rotate(5deg);
+}
+
+footer .sunlight3 {
+  -webkit-transform: translate(80%, 0%) rotate(35deg);
+          transform: translate(80%, 0%) rotate(35deg);
+}
+
+footer .sunlight4 {
+  -webkit-transform: translate(0%, 150%) rotate(60deg);
+          transform: translate(0%, 150%) rotate(60deg);
+}
+
+footer .sunlight5 {
+  -webkit-transform: translate(-100%, 200%) rotate(80deg);
+          transform: translate(-100%, 200%) rotate(80deg);
+}
+
+footer .sunlight6 {
+  -webkit-transform: translate(-200%, 100%) rotate(100deg);
+          transform: translate(-200%, 100%) rotate(100deg);
+}
+
+footer .cloud {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .cloud .piece1 {
+  background: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translate(20%, 0%);
+          transform: translate(20%, 0%);
+}
+
+footer .cloud .piece2 {
+  background: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+footer .cloud .piece3 {
+  -webkit-transform: translate(-20%, 0%);
+          transform: translate(-20%, 0%);
+  background: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+footer .cloud1 {
+  top: 20%;
+  right: 55%;
+  -webkit-animation: cloudMove linear 160s infinite;
+          animation: cloudMove linear 160s infinite;
+}
+
+footer .cloud2 {
+  top: 4%;
+  right: 25%;
+  -webkit-animation: cloudMove ease 300s infinite;
+          animation: cloudMove ease 300s infinite;
+}
+
+footer .cloud3 {
+  top: 12%;
+  right: -10%;
+  -webkit-animation: cloudMove ease-in-out 200s infinite;
+          animation: cloudMove ease-in-out 200s infinite;
+}
+
+footer .ground {
+  height: 20vh;
+  width: 100vw;
+  background: white;
+  bottom: 0;
+  position: absolute;
+  border-radius: 20%;
+  -webkit-transform: translate(0%, 50%);
+          transform: translate(0%, 50%);
+}
+
+@-webkit-keyframes sayHi {
+  from {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  to {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@keyframes sayHi {
+  from {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  to {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@-webkit-keyframes say {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes say {
+  from {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@-webkit-keyframes cloudMove {
+  to {
+    right: 110%;
+  }
+}
+
+@keyframes cloudMove {
+  to {
+    right: 110%;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

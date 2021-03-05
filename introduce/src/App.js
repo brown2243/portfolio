@@ -66,9 +66,7 @@ function App() {
             <Skills />
             <Projects />
           </section>
-          <footer>
-            <h1>Footer</h1>
-          </footer>
+          <Footer />
         </div>
       </div>
     </div>
