@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "./Header";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Footer from "./Footer";
+import Header from "./component/Header";
+import Skills from "./component/Skills";
+import Projects from "./component/Projects";
+import Footer from "./component/Footer";
 
 function scrollFooter(scrollY, heightFooter) {
   console.log("onScrollFooter");

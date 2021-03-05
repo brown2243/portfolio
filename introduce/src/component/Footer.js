@@ -1,18 +1,18 @@
-import "./App.css";
-
 function Footer() {
   let check = false;
   const change = (e) => {
     if (check) return;
     check = true;
+    console.log(e.target);
     const email = document.createElement("h6");
     const contact = document.createElement("h6");
-    console.log(email);
+    const git = document.createElement("h6");
     email.textContent = "Email : brown2243@naver.com";
     contact.textContent = "Phone : 010-2406-2243";
+    git.textContent = "GitHub : https://github.com/brown2243";
     e.target.appendChild(email);
     e.target.appendChild(contact);
-    console.log(e.target);
+    e.target.appendChild(git);
   };
 
   return (

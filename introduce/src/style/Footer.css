@@ -26,6 +26,10 @@ footer h1 .box {
   text-align: center;
 }
 
+footer h1 .box h6 {
+  font-size: 2rem;
+}
+
 footer h1 .hand {
   pointer-events: none;
   display: inline-block;
@@ -130,26 +134,26 @@ footer .cloud .piece3 {
 footer .cloud1 {
   top: 20%;
   right: 55%;
-  -webkit-animation: cloudMove linear 160s infinite;
-          animation: cloudMove linear 160s infinite;
+  -webkit-animation: cloudMove linear 260s infinite;
+          animation: cloudMove linear 260s infinite;
 }
 
 footer .cloud2 {
   top: 4%;
   right: 25%;
-  -webkit-animation: cloudMove ease 300s infinite;
-          animation: cloudMove ease 300s infinite;
+  -webkit-animation: cloudMove ease 500s infinite;
+          animation: cloudMove ease 500s infinite;
 }
 
 footer .cloud3 {
   top: 12%;
   right: -10%;
-  -webkit-animation: cloudMove ease-in-out 200s infinite;
-          animation: cloudMove ease-in-out 200s infinite;
+  -webkit-animation: cloudMove ease-in-out 300s infinite;
+          animation: cloudMove ease-in-out 300s infinite;
 }
 
 footer .ground {
-  height: 20vh;
+  height: 30vh;
   width: 100vw;
   background: white;
   bottom: 0;

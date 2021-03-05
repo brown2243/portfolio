@@ -1,14 +1,8 @@
-import "./App.css";
-// window.addEventListener("click", (e) => {
-//   console.log(e.target);
-// });
 function Skills() {
   function clickIcon(e) {
     document.querySelector(".skill").style.animation =
       "blurOn 1s ease forwards";
     document.querySelector(".skill").style.pointerEvents = "none";
-    console.log(e.target);
-    console.log(e.target.getAttribute("name"));
     const detail = document.querySelector(
       `#detail_${e.target.getAttribute("name")}`
     );
@@ -21,6 +15,7 @@ function Skills() {
     document.querySelector(".skill").style.pointerEvents = "auto";
     e.target.style.animation = "pop_down 1s ease forwards";
   }
+
   return (
     <>
       <div className="skill">

@@ -14,8 +14,8 @@ header {
 }
 
 header .svg_container {
-  -webkit-transform: translate(2%, 0%);
-          transform: translate(2%, 0%);
+  -webkit-transform: translate(2%, 5%);
+          transform: translate(2%, 5%);
 }
 
 header #introduce {

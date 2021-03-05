@@ -48,23 +48,18 @@ footer,
   height: 200vh;
   z-index: 5;
   position: relative;
-  background: rgba(245, 244, 240, 1);
 
   .skill {
     height: 50%;
   }
   .project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    background: green;
     height: 50%;
   }
 }
 
 // content_skill
 .skill {
+  background: rgba(245, 244, 240, 1);
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -98,39 +93,64 @@ footer,
         background-position-x: 50%;
         background-position-y: 50%;
         box-shadow: 0px 0px 20px rgb(229, 219, 175);
-        &:hover {
-          box-shadow: 0px 0px 10px rgb(3, 154, 255);
-        }
       }
+
       .html {
         background-size: 140px;
         background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
+        &:hover {
+          box-shadow: 0px 0px 10px tomato;
+        }
       }
+
       .css {
         background-size: 100px;
         background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
+        &:hover {
+          box-shadow: 0px 0px 10px #2965f1;
+        }
       }
+
       .js {
         background-size: 155px;
         background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg);
+        &:hover {
+          box-shadow: 0px 0px 10px yellow;
+        }
       }
+
       .react {
         background-color: black;
         background-size: 240px;
         background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg);
+        &:hover {
+          box-shadow: 0px 0px 10px #61dafb;
+        }
       }
+
       .nodejs {
         background-size: 130px;
         background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg);
+        &:hover {
+          box-shadow: 0px 0px 10px #73ab63;
+        }
       }
+
       .python {
         background-size: 130px;
         background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
+        &:hover {
+          box-shadow: 0px 0px 10px #376e9c;
+        }
       }
+
       .etc {
         display: flex;
         align-items: center;
         justify-content: center;
+        &:hover {
+          box-shadow: 0px 0px 10px gray;
+        }
         .circle {
           height: 15px;
           width: 15px;
@@ -201,7 +221,66 @@ footer,
 }
 
 // content_project
+.project {
+  color: rgba(255, 255, 255, 0.801);
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  hr {
+    background: rgba(255, 255, 255, 0.801);
+  }
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .project_title {
+    h1 {
+      font-size: 3rem;
+    }
+    margin-bottom: 5rem;
+  }
 
+  .project_container {
+    height: 50vh;
+    width: 80vw;
+    table {
+      box-shadow: 0px 0px 5px rgba(0, 195, 255, 1);
+      border-collapse: collapse;
+      thead {
+        background: rgb(0, 245, 184);
+        border: 5px solid rgb(0, 245, 184);
+        th {
+          height: 10vh;
+          width: 20vw;
+          font-size: 2rem;
+        }
+      }
+      tbody {
+        border: 5px solid rgba(162, 248, 227, 0.5);
+        background: rgba(162, 248, 227, 0.5);
+        // background: white;
+        // color: #0969f0;
+        color: #16bdffe7;
+        font-weight: bold;
+        tr {
+          &:hover {
+            cursor: pointer;
+            background: whitesmoke;
+          }
+
+          td {
+            // border: 1px solid black;
+            font-size: 1.5rem;
+            height: 20vh;
+            div {
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 // media
 
 @media screen and (max-height: 720px) {
@@ -224,17 +303,7 @@ footer,
     }
   }
 }
-
-// ani
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// ani - skill
 
 @keyframes pop_up {
   from {
@@ -278,3 +347,5 @@ footer,
     filter: blur(0px);
   }
 }
+
+// ani - project

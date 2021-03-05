@@ -15,6 +15,9 @@ footer {
     cursor: pointer;
     .box {
       text-align: center;
+      h6 {
+        font-size: 2rem;
+      }
     }
     .hand {
       pointer-events: none;
@@ -96,21 +99,21 @@ footer {
   .cloud1 {
     top: 20%;
     right: 55%;
-    animation: cloudMove linear 160s infinite;
+    animation: cloudMove linear 260s infinite;
   }
   .cloud2 {
     top: 4%;
     right: 25%;
-    animation: cloudMove ease 300s infinite;
+    animation: cloudMove ease 500s infinite;
   }
   .cloud3 {
     top: 12%;
     right: -10%;
-    animation: cloudMove ease-in-out 200s infinite;
+    animation: cloudMove ease-in-out 300s infinite;
   }
 
   .ground {
-    height: 20vh;
+    height: 30vh;
     width: 100vw;
     background: white;
     bottom: 0;

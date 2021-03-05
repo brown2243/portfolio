@@ -46,8 +46,8 @@ header {
 }
 
 header .svg_container {
-  -webkit-transform: translate(2%, 0%);
-          transform: translate(2%, 0%);
+  -webkit-transform: translate(2%, 5%);
+          transform: translate(2%, 5%);
 }
 
 header #introduce {
@@ -275,6 +275,10 @@ footer h1 .box {
   text-align: center;
 }
 
+footer h1 .box h6 {
+  font-size: 2rem;
+}
+
 footer h1 .hand {
   pointer-events: none;
   display: inline-block;
@@ -379,26 +383,26 @@ footer .cloud .piece3 {
 footer .cloud1 {
   top: 20%;
   right: 55%;
-  -webkit-animation: cloudMove linear 160s infinite;
-          animation: cloudMove linear 160s infinite;
+  -webkit-animation: cloudMove linear 260s infinite;
+          animation: cloudMove linear 260s infinite;
 }
 
 footer .cloud2 {
   top: 4%;
   right: 25%;
-  -webkit-animation: cloudMove ease 300s infinite;
-          animation: cloudMove ease 300s infinite;
+  -webkit-animation: cloudMove ease 500s infinite;
+          animation: cloudMove ease 500s infinite;
 }
 
 footer .cloud3 {
   top: 12%;
   right: -10%;
-  -webkit-animation: cloudMove ease-in-out 200s infinite;
-          animation: cloudMove ease-in-out 200s infinite;
+  -webkit-animation: cloudMove ease-in-out 300s infinite;
+          animation: cloudMove ease-in-out 300s infinite;
 }
 
 footer .ground {
-  height: 20vh;
+  height: 30vh;
   width: 100vw;
   background: white;
   bottom: 0;
@@ -479,7 +483,6 @@ footer,
   height: 200vh;
   z-index: 5;
   position: relative;
-  background: #f5f4f0;
 }
 
 .content .skill {
@@ -487,21 +490,11 @@ footer,
 }
 
 .content .project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: bold;
-  background: green;
   height: 50%;
 }
 
 .skill {
+  background: #f5f4f0;
   text-align: center;
   min-height: 100vh;
   display: -webkit-box;
@@ -561,14 +554,14 @@ footer,
           box-shadow: 0px 0px 20px #e5dbaf;
 }
 
-.skill .icons_container .icon_container .icon:hover {
-  -webkit-box-shadow: 0px 0px 10px #039aff;
-          box-shadow: 0px 0px 10px #039aff;
-}
-
 .skill .icons_container .icon_container .html {
   background-size: 140px;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg);
+}
+
+.skill .icons_container .icon_container .html:hover {
+  -webkit-box-shadow: 0px 0px 10px tomato;
+          box-shadow: 0px 0px 10px tomato;
 }
 
 .skill .icons_container .icon_container .css {
@@ -576,9 +569,19 @@ footer,
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg);
 }
 
+.skill .icons_container .icon_container .css:hover {
+  -webkit-box-shadow: 0px 0px 10px #2965f1;
+          box-shadow: 0px 0px 10px #2965f1;
+}
+
 .skill .icons_container .icon_container .js {
   background-size: 155px;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg);
+}
+
+.skill .icons_container .icon_container .js:hover {
+  -webkit-box-shadow: 0px 0px 10px yellow;
+          box-shadow: 0px 0px 10px yellow;
 }
 
 .skill .icons_container .icon_container .react {
@@ -587,14 +590,29 @@ footer,
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg);
 }
 
+.skill .icons_container .icon_container .react:hover {
+  -webkit-box-shadow: 0px 0px 10px #61dafb;
+          box-shadow: 0px 0px 10px #61dafb;
+}
+
 .skill .icons_container .icon_container .nodejs {
   background-size: 130px;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg);
 }
 
+.skill .icons_container .icon_container .nodejs:hover {
+  -webkit-box-shadow: 0px 0px 10px #73ab63;
+          box-shadow: 0px 0px 10px #73ab63;
+}
+
 .skill .icons_container .icon_container .python {
   background-size: 130px;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg);
+}
+
+.skill .icons_container .icon_container .python:hover {
+  -webkit-box-shadow: 0px 0px 10px #376e9c;
+          box-shadow: 0px 0px 10px #376e9c;
 }
 
 .skill .icons_container .icon_container .etc {
@@ -607,6 +625,11 @@ footer,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.skill .icons_container .icon_container .etc:hover {
+  -webkit-box-shadow: 0px 0px 10px gray;
+          box-shadow: 0px 0px 10px gray;
 }
 
 .skill .icons_container .icon_container .etc .circle {
@@ -692,6 +715,82 @@ footer,
   font-size: 1.5rem;
 }
 
+.project {
+  color: rgba(255, 255, 255, 0.801);
+  background: -webkit-gradient(linear, left bottom, right top, from(#65dfc9), to(#6cdbeb));
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  text-align: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project hr {
+  background: rgba(255, 255, 255, 0.801);
+}
+
+.project .project_title {
+  margin-bottom: 5rem;
+}
+
+.project .project_title h1 {
+  font-size: 3rem;
+}
+
+.project .project_container {
+  height: 50vh;
+  width: 80vw;
+}
+
+.project .project_container table {
+  -webkit-box-shadow: 0px 0px 5px #00c3ff;
+          box-shadow: 0px 0px 5px #00c3ff;
+  border-collapse: collapse;
+}
+
+.project .project_container table thead {
+  background: #00f5b8;
+  border: 5px solid #00f5b8;
+}
+
+.project .project_container table thead th {
+  height: 10vh;
+  width: 20vw;
+  font-size: 2rem;
+}
+
+.project .project_container table tbody {
+  border: 5px solid rgba(162, 248, 227, 0.5);
+  background: rgba(162, 248, 227, 0.5);
+  color: #16bdffe7;
+  font-weight: bold;
+}
+
+.project .project_container table tbody tr:hover {
+  cursor: pointer;
+  background: whitesmoke;
+}
+
+.project .project_container table tbody tr td {
+  font-size: 1.5rem;
+  height: 20vh;
+}
+
+.project .project_container table tbody tr td div {
+  pointer-events: none;
+}
+
 @media screen and (max-height: 720px) {
   header {
     height: 720px;
@@ -708,28 +807,6 @@ footer,
 @media screen and (max-width: 1280px) {
   .skill .icons_container {
     width: 80vw;
-  }
-}
-
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
   }
 }
 
