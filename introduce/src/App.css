@@ -791,6 +791,100 @@ footer,
   pointer-events: none;
 }
 
+.project .detail {
+  border: 5px solid black;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  position: absolute;
+  height: 90vh;
+  width: 90vw;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  border-radius: 2rem;
+}
+
+.project .detail .index {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+}
+
+.project .detail .index .num {
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.project .detail .card_slider {
+  position: absolute;
+}
+
+.project .detail .card_slider .card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.project .detail .card_slider .card p.intro {
+  padding-top: 20vh;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project .detail .card_slider .card p.intro h1 {
+  font-size: 2.5rem;
+}
+
+.project .detail .card_slider .card p.intro pre {
+  font-size: 2rem;
+}
+
+.project .detail .card_slider .card .card_img {
+  height: 70vh;
+  background: white;
+}
+
+.project .detail .card_slider .card .card_img img {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.project .detail .card_slider .card .card_text {
+  color: black;
+  font-size: 2rem;
+  height: 20vh;
+  background: white;
+}
+
 @media screen and (max-height: 720px) {
   header {
     height: 720px;

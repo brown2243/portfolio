@@ -3,7 +3,6 @@ function Footer() {
   const change = (e) => {
     if (check) return;
     check = true;
-    console.log(e.target);
     const email = document.createElement("h6");
     const contact = document.createElement("h6");
     const git = document.createElement("h6");
