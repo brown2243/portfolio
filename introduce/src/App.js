@@ -5,14 +5,14 @@ import Projects from "./component/Projects";
 import Footer from "./component/Footer";
 
 function scrollFooter(scrollY, heightFooter) {
-  console.log("onScrollFooter");
-  console.log(scrollY);
+  // console.log("onScrollFooter");
+  // console.log(scrollY);
 
   if (scrollY >= heightFooter) {
-    console.log("scrollY >= heightFooter");
+    // console.log("scrollY >= heightFooter");
     document.getElementsByTagName("footer")[0].style.bottom = "0px";
   } else {
-    console.log("scrollY < heightFooter");
+    // console.log("scrollY < heightFooter");
     document.getElementsByTagName(
       "footer"
     )[0].style.bottom = `-${heightFooter}px`;
@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementsByClassName("content")[0].scrollHeight +
     footerHeight -
     20;
-  console.log(windowHeight, footerHeight);
+  // console.log(windowHeight, footerHeight);
   document.getElementById(
     "scroll-animate"
   ).style.height = `${heightDocument}px`;
@@ -41,11 +41,10 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementsByClassName(
     "wrapper-parallax"
   )[0].style.marginTop = `${windowHeight}px`;
-  console.log("Loaded");
   scrollFooter(window.scrollY, footerHeight);
 
   window.onscroll = () => {
-    console.log("onScroll");
+    // console.log("onScroll");
     const scroll = window.scrollY;
     document.getElementById("scroll-animate-main").style.top = `-${scroll}px`;
     document.getElementsByTagName(

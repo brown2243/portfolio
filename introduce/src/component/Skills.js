@@ -68,14 +68,9 @@ function Skills() {
         </div>
         <div className="detail_body">
           <ul>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
+            <li>1. 시멘틱태그를 적절하게 사용할 수 있습니다.</li>
+            <li>2. Emmet문법을 사용해 HTML문서를 작성할 수 있습니다.</li>
           </ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint
-          illum tempora, distinctio, laudantium possimus consequuntur nemo
-          tenetur officia facere porro deserunt! Autem sit ratione aliquam
-          ducimus mollitia vel excepturi?
         </div>
       </div>
 
@@ -85,14 +80,14 @@ function Skills() {
         </div>
         <div className="detail_body">
           <ul>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
+            <li>
+              1. CSS에서 사용되는 단위들(px,em,rem,vh,vw..)을 이해하고 있습니다.
+            </li>
+            <li>2. At rule 문법을 사용해 애니메이션을 만들 수 있습니다.</li>
+            <li>3. At rule 문법을 사용해 반응형 웹을 만들 수 있습니다.</li>
+            <li>4. Flex-box, Grid를 사용하여 레이아웃을 잡을 수 있습니다.</li>
+            <li>5. SCSS를 사용할 수 있습니다.</li>
           </ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint
-          illum tempora, distinctio, laudantium possimus consequuntur nemo
-          tenetur officia facere porro deserunt! Autem sit ratione aliquam
-          ducimus mollitia vel excepturi?
         </div>
       </div>
 
@@ -102,14 +97,10 @@ function Skills() {
         </div>
         <div className="detail_body">
           <ul>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
+            <li>1. JS의 Event_loop를 이해하고 있습니다.</li>
+            <li>2. ES6 문법을 사용 및 활용할 수 있습니다.</li>
+            <li>3. Web API를 사용해 DOM 조작을 할 수 있습니다.</li>
           </ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint
-          illum tempora, distinctio, laudantium possimus consequuntur nemo
-          tenetur officia facere porro deserunt! Autem sit ratione aliquam
-          ducimus mollitia vel excepturi?
         </div>
       </div>
 
@@ -119,14 +110,12 @@ function Skills() {
         </div>
         <div className="detail_body">
           <ul>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
+            <li>1. Class형 Component를 작성할 수 있습니다.</li>
+            <li>2. Function형 Componenet를 작성할 수 있습니다.</li>
+            <li>3. Props와 State를 이해하고 있습니다.</li>
+            <li>4. React_Hook을 사용할 수 있습니다.</li>
+            <li>5. Component의 Life Cycle을 이해하고 있습니다.</li>
           </ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint
-          illum tempora, distinctio, laudantium possimus consequuntur nemo
-          tenetur officia facere porro deserunt! Autem sit ratione aliquam
-          ducimus mollitia vel excepturi?
         </div>
       </div>
 
@@ -136,14 +125,12 @@ function Skills() {
         </div>
         <div className="detail_body">
           <ul>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
+            <li>
+              1. Express의 미들웨어를 활용해 restful한 서버를 만들 수 있습니다.
+            </li>
+            <li>2. CORS 라이브러리로 CORS error를 해결할 수 있습니다.</li>
+            <li>3. Mongoose를 사용할 수 있습니다.</li>
           </ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint
-          illum tempora, distinctio, laudantium possimus consequuntur nemo
-          tenetur officia facere porro deserunt! Autem sit ratione aliquam
-          ducimus mollitia vel excepturi?
         </div>
       </div>
 
@@ -153,14 +140,10 @@ function Skills() {
         </div>
         <div className="detail_body">
           <ul>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
+            <li>1. 프로그래밍 첫 입문 언어라서 넣었습니다.</li>
+            <li>2. 알고리즘 공부를 파이썬으로 시작 했었습니다.</li>
+            <li>3. 지금은 JS로 하고 있습니다.</li>
           </ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint
-          illum tempora, distinctio, laudantium possimus consequuntur nemo
-          tenetur officia facere porro deserunt! Autem sit ratione aliquam
-          ducimus mollitia vel excepturi?
         </div>
       </div>
 
@@ -170,14 +153,16 @@ function Skills() {
         </div>
         <div className="detail_body">
           <ul>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
-            <li>~~할수있습니다</li>
+            <li>1. DB는 Oracle, MySQL, MongoDB 사용해봤습니다.</li>
+            <li> 간단한 SQL문 작성할 수 있습니다.</li>
+            <li>2. Java 기본문법을 알고 있고, JSP, Spring 사용해봤습니다.</li>
+            <br />
+            <li>
+              보고 계신 자기소개 페이지는 react로 생성하긴 했지만 React의 DOM
+              조작방식(useRef)대신 바닐라JS로 DOM조작 하는 방식으로
+              만들어졌습니다.
+            </li>
           </ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint
-          illum tempora, distinctio, laudantium possimus consequuntur nemo
-          tenetur officia facere porro deserunt! Autem sit ratione aliquam
-          ducimus mollitia vel excepturi?
         </div>
       </div>
     </>

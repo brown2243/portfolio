@@ -633,6 +633,7 @@ footer,
 }
 
 .skill .icons_container .icon_container .etc .circle {
+  pointer-events: none;
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -642,6 +643,7 @@ footer,
 
 .pop_detail {
   cursor: pointer;
+  overflow: hidden;
   width: 55vw;
   height: 60vh;
   background: #f5f4f0;
@@ -820,7 +822,7 @@ footer,
           transform: rotate(180deg) scale(0.2);
   opacity: 0.7;
   left: -5vw;
-  top: 20vh;
+  top: 25vh;
 }
 
 .project .detail .btnbox .up:hover {
@@ -832,7 +834,7 @@ footer,
   position: fixed;
   opacity: 0.7;
   right: -5vw;
-  top: 20vh;
+  top: 25vh;
   -webkit-transform: rotate(0deg) scale(0.2);
           transform: rotate(0deg) scale(0.2);
 }
@@ -867,11 +869,19 @@ footer,
 
 .project .detail .card_slider .card .card_img {
   height: 70vh;
+  background: black;
+  border-bottom: 5px solid black;
 }
 
 .project .detail .card_slider .card .card_img img {
   height: 100%;
   width: 50%;
+  position: relative;
+}
+
+.project .detail .card_slider .card .card_img img.one {
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 
