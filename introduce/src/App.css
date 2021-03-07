@@ -792,62 +792,63 @@ footer,
 }
 
 .project .detail {
+  opacity: 0.5;
+  z-index: -1;
   border: 5px solid black;
   -webkit-box-shadow: 5px 5px 10px black;
           box-shadow: 5px 5px 10px black;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
   position: absolute;
   height: 90vh;
   width: 90vw;
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
   border-radius: 2rem;
+  overflow: hidden;
 }
 
-.project .detail .index {
+.project .detail .btnbox {
+  z-index: 3;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 2;
 }
 
-.project .detail .index .num {
+.project .detail .btnbox .up {
   cursor: pointer;
-  margin: 5px;
-  font-weight: bold;
-  font-size: 1.5rem;
-  background: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: rotate(180deg) scale(0.2);
+          transform: rotate(180deg) scale(0.2);
+  opacity: 0.7;
+  left: -5vw;
+  top: 20vh;
+}
+
+.project .detail .btnbox .up:hover {
+  opacity: 1;
+}
+
+.project .detail .btnbox .down {
+  cursor: pointer;
+  position: fixed;
+  opacity: 0.7;
+  right: -5vw;
+  top: 20vh;
+  -webkit-transform: rotate(0deg) scale(0.2);
+          transform: rotate(0deg) scale(0.2);
+}
+
+.project .detail .btnbox .down:hover {
+  opacity: 1;
 }
 
 .project .detail .card_slider {
-  position: absolute;
-}
-
-.project .detail .card_slider .card {
-  position: relative;
-  height: 100%;
-  width: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .project .detail .card_slider .card p.intro {
+  height: 90vh;
+  background: rgba(255, 239, 218, 0.959);
   padding-top: 20vh;
   color: black;
   display: -webkit-box;
@@ -857,19 +858,15 @@ footer,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 1.8rem;
 }
 
-.project .detail .card_slider .card p.intro h1 {
+.project .detail .card_slider .card p.intro b {
   font-size: 2.5rem;
-}
-
-.project .detail .card_slider .card p.intro pre {
-  font-size: 2rem;
 }
 
 .project .detail .card_slider .card .card_img {
   height: 70vh;
-  background: white;
 }
 
 .project .detail .card_slider .card .card_img img {
@@ -880,7 +877,7 @@ footer,
 
 .project .detail .card_slider .card .card_text {
   color: black;
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: 20vh;
   background: white;
 }
@@ -901,6 +898,18 @@ footer,
 @media screen and (max-width: 1280px) {
   .skill .icons_container {
     width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 60%;
   }
 }
 
@@ -1005,6 +1014,58 @@ footer,
   to {
     -webkit-filter: blur(0px);
             filter: blur(0px);
+  }
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
   }
 }
 /*# sourceMappingURL=App.css.map */

@@ -280,59 +280,63 @@ footer,
 
   // project_detail
   .detail {
+    opacity: 0.5;
+    z-index: -1;
     border: 5px solid black;
     box-shadow: 5px 5px 10px black;
-    transform: scale(1);
+    transform: scale(0.2);
     position: absolute;
     height: 90vh;
     width: 90vw;
-    // background: yellow;
     transition: all 1s linear;
     border-radius: 2rem;
-    // overflow: hidden;
-    .index {
+    overflow: hidden;
+
+    .btnbox {
+      z-index: 3;
       position: absolute;
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      z-index: 2;
-      .num {
+      .up {
         cursor: pointer;
-        margin: 5px;
-        font-weight: bold;
-        font-size: 1.5rem;
-        background: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
+        position: absolute;
+        transform: rotate(180deg) scale(0.2);
+        opacity: 0.7;
+        left: -5vw;
+        top: 20vh;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .down {
+        cursor: pointer;
+        position: fixed;
+        opacity: 0.7;
+        right: -5vw;
+        top: 20vh;
+        transform: rotate(0deg) scale(0.2);
+        &:hover {
+          opacity: 1;
+        }
       }
     }
     .card_slider {
-      position: absolute;
-      // display: flex;
-
+      transition: all 1s ease;
       .card {
-        position: relative;
-        height: 100%;
-        width: 100%;
+        // height: 100%;
+        // width: 100%;
         p.intro {
+          height: 90vh;
+          background: rgba(255, 239, 218, 0.959);
           padding-top: 20vh;
           color: black;
           display: flex;
           flex-direction: column;
-          h1 {
+          b {
             font-size: 2.5rem;
           }
-          pre {
-            font-size: 2rem;
-          }
+          font-size: 1.8rem;
         }
         .card_img {
           height: 70vh;
-          background: white;
           // background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg)
           //   no-repeat 50% 50%;
 
@@ -344,7 +348,7 @@ footer,
         }
         .card_text {
           color: black;
-          font-size: 2rem;
+          font-size: 1.5rem;
           // position: relative;
           height: 20vh;
           background: white;
@@ -373,6 +377,16 @@ footer,
     .icons_container {
       width: 80vw;
     }
+  }
+}
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 60%;
   }
 }
 // ani - skill
@@ -421,3 +435,23 @@ footer,
 }
 
 // ani - project
+@keyframes scaleUp {
+  from {
+    opacity: 0.5;
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scaleDown {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
