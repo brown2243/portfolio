@@ -36,9 +36,9 @@ function deletePost(postID) {
 function updateUser(update) {
   return Axios.patch(BOARD + "/setting/update", update);
 }
-// function deleteUser(user) {
-//   return Axios.post(BOARD + "/setting/delete", user);
-// }
+function deleteUser(user) {
+  return Axios.post(BOARD + "/setting/delete", user);
+}
 
 export { loginUser, fetchByToken, insertUser, updateUser, deleteUser };
 export {
